@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (min-width: 0) {
   .fs-05 {
     font-size: 1.47566rem; } }
@@ -196,7 +197,7 @@ body {
   background-color: lightslategrey;
   font-size: 300; }
   body:before {
-    content: '';
+    content: '⋰';
     position: absolute;
     top: 0;
     left: 0;
