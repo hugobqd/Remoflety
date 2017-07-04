@@ -1,0 +1,213 @@
+@media (min-width: 0) {
+  .fs-05 {
+    font-size: 1.47566rem; } }
+
+@media (min-width: 500px) {
+  .fs-05 {
+    font-size: 2.31306rem; } }
+
+@media (min-width: 992px) {
+  .fs-05 {
+    font-size: 5.5349rem; } }
+
+@media (min-width: 1600px) {
+  .fs-05 {
+    font-size: 7.85805rem; } }
+
+@media (min-width: 0) {
+  .fs-10 {
+    font-size: 1.383rem; } }
+
+@media (min-width: 500px) {
+  .fs-10 {
+    font-size: 2.01136rem; } }
+
+@media (min-width: 992px) {
+  .fs-10 {
+    font-size: 4.16158rem; } }
+
+@media (min-width: 1600px) {
+  .fs-10 {
+    font-size: 5.57308rem; } }
+
+@media (min-width: 0) {
+  .fs-20 {
+    font-size: 1.29616rem; } }
+
+@media (min-width: 500px) {
+  .fs-20 {
+    font-size: 1.74901rem; } }
+
+@media (min-width: 992px) {
+  .fs-20 {
+    font-size: 3.12901rem; } }
+
+@media (min-width: 1600px) {
+  .fs-20 {
+    font-size: 3.95254rem; } }
+
+@media (min-width: 0) {
+  .fs-30 {
+    font-size: 1.21477rem; } }
+
+@media (min-width: 500px) {
+  .fs-30 {
+    font-size: 1.52087rem; } }
+
+@media (min-width: 992px) {
+  .fs-30 {
+    font-size: 2.35264rem; } }
+
+@media (min-width: 1600px) {
+  .fs-30 {
+    font-size: 2.80322rem; } }
+
+@media (min-width: 0) {
+  .fs-40 {
+    font-size: 1.13849rem; } }
+
+@media (min-width: 500px) {
+  .fs-40 {
+    font-size: 1.3225rem; } }
+
+@media (min-width: 992px) {
+  .fs-40 {
+    font-size: 1.7689rem; } }
+
+@media (min-width: 1600px) {
+  .fs-40 {
+    font-size: 1.9881rem; } }
+
+@media (min-width: 0) {
+  .fs-45 {
+    font-size: 1.08796rem; } }
+
+@media (min-width: 500px) {
+  .fs-45 {
+    font-size: 1.19924rem; } }
+
+@media (min-width: 992px) {
+  .fs-45 {
+    font-size: 1.4488rem; } }
+
+@media (min-width: 1600px) {
+  .fs-45 {
+    font-size: 1.56309rem; } }
+
+.fs-50 {
+  font-size: 1rem; }
+
+.fs-60 {
+  font-size: 0.8rem; }
+
+.fs-70 {
+  font-size: 0.75rem; }
+
+/* Older browsers and mobile */
+html {
+  font-size: 14px; }
+
+/* Modern browsers only need this one */
+@media screen and (min-width: 500px) {
+  html {
+    font-size: calc( 16px + ( 22 - 16 ) * ( 100vw - 500px ) / ( 1900 - 500 )); } }
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 22px; } }
+
+@media (min-width: 0) {
+  h1, .h1 {
+    font-size: 1.383rem; } }
+
+@media (min-width: 500px) {
+  h1, .h1 {
+    font-size: 2.01136rem; } }
+
+@media (min-width: 992px) {
+  h1, .h1 {
+    font-size: 4.16158rem; } }
+
+@media (min-width: 1600px) {
+  h1, .h1 {
+    font-size: 5.57308rem; } }
+
+@media (min-width: 0) {
+  h2, .h2 {
+    font-size: 1.29616rem; } }
+
+@media (min-width: 500px) {
+  h2, .h2 {
+    font-size: 1.74901rem; } }
+
+@media (min-width: 992px) {
+  h2, .h2 {
+    font-size: 3.12901rem; } }
+
+@media (min-width: 1600px) {
+  h2, .h2 {
+    font-size: 3.95254rem; } }
+
+@media (min-width: 0) {
+  h3, .h3 {
+    font-size: 1.21477rem; } }
+
+@media (min-width: 500px) {
+  h3, .h3 {
+    font-size: 1.52087rem; } }
+
+@media (min-width: 992px) {
+  h3, .h3 {
+    font-size: 2.35264rem; } }
+
+@media (min-width: 1600px) {
+  h3, .h3 {
+    font-size: 2.80322rem; } }
+
+@media (min-width: 0) {
+  h4, .h4 {
+    font-size: 1.13849rem; } }
+
+@media (min-width: 500px) {
+  h4, .h4 {
+    font-size: 1.3225rem; } }
+
+@media (min-width: 992px) {
+  h4, .h4 {
+    font-size: 1.7689rem; } }
+
+@media (min-width: 1600px) {
+  h4, .h4 {
+    font-size: 1.9881rem; } }
+
+h5, .h5 {
+  font-size: 1rem; }
+
+h6, .h6, label {
+  font-size: 0.8rem; }
+
+small {
+  font-size: 0.75rem; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  padding: 1rem;
+  line-height: 1.4;
+  background-color: lightslategrey; }
+
+h1, h2, h3, h4, h5, h6, .title {
+  font-weight: 500;
+  margin: 0 0 .5rem; }
+
+header {
+  color: darkorange;
+  margin-bottom: 1rem; }
+
+.code {
+  font-family: monospace;
+  color: darkorange; }
+
+.max-width {
+  max-width: 30em; }
+
+/*# sourceMappingURL=demo.css.map */

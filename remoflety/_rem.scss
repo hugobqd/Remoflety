@@ -1,0 +1,22 @@
+// ----------------------------------------
+//        HTML FONT-SIZE (pour REM)
+// ----------------------------------------
+
+// https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png
+$fs-min-no-unit: strip-unit($fs-min);
+$fs-max-no-unit: strip-unit($fs-max);
+$fs-min-bp-no-unit: strip-unit($fs-min-bp);
+$fs-max-bp-no-unit: strip-unit($fs-max-bp);
+
+/* Older browsers and mobile */
+html { font-size: $fs-xs; }
+
+/* Modern browsers only need this one */
+@media screen and (min-width: $fs-min-bp){
+    html {
+        font-size: calc( #{$fs-min} + ( #{$fs-max-no-unit} - #{$fs-min-no-unit} ) * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
+    }
+}
+@media screen and (min-width: $fs-max-bp){
+    html { font-size: $fs-max; }
+}

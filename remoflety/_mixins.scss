@@ -1,0 +1,30 @@
+// ----------------------------------------
+//       MIXINS
+// ----------------------------------------
+
+// Mixin de font-size
+// Usage .toto { @include fs(10); } // = font-size du H1
+@mixin fs($key) {
+    @if unit( map-get($fs-map, $key) ) == '' {
+        @each $bp, $ratio in $fs-ratios {
+            @media (min-width: $bp) {
+                font-size: pow($ratio, map-get($fs-map, $key)) * 1rem;
+            }
+        }
+    } @else {
+        font-size: map-get($fs-map, $key);
+    }
+}
+
+// Création des classes de font-size .fs-10 {}…
+@each $key, $val in $fs-map {
+    @if $key < 10 {
+        .fs-0#{$key} {
+            @include fs($key)
+        }
+    } @else {
+        .fs-#{$key} {
+            @include fs($key)
+        }
+    }
+}
