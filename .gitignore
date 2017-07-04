@@ -2,3 +2,5 @@
 *.config
 
 \.DS_Store
+
+README\.html

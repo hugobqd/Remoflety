@@ -2,8 +2,9 @@
 //
 //  Responsive, modular & flexible typography
 //  • Base REM Responsive calculée selon le viewport
-//  • Classes de font-size : .fs-10 -> font-size du h1…
-//  • Ratios des titrages et des classes de font-size augmentés breakpoints
+//  • Ratios des titrages et des classes de font-size augmentés aux breakpoints
+//  • Classes et mixins de font-size :
+//        @ include fs(10) -> .fs-10 -> font-size du h1…
 //
 @import "_variables.scss";
 @import "_functions.scss";
@@ -11,8 +12,7 @@
 @import "_rem.scss";
 @import "_elements.scss";
 
-
-// La Fluidité des ratio peux être amélioré :
+// La Fluidité des ratios peux être amélioré :
 // https://www.smashingmagazine.com/2016/05/fluid-typography/#implementing-a-modular-scale
 // https://codepen.io/MadeByMike/pen/VvwqvW?editors=0010
 // Au détriment de la souplesse ?
