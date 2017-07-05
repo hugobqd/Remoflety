@@ -5,7 +5,7 @@
 - Ratios des niveaux de font-size augmentés aux breakpoints
 - Classes et mixins de font-size : `@include fs(10)` = `.fs-10` = font-size du `<h1>`
 
-## Incoprorer
+## Incorporer
 
 - Inclure le dossier *remoflety* et importer `remoflety/remoflety.scss`.
 - Inclure les variables `remoflety/_variables.scss` dans son fichier de variables (facultatif).
@@ -100,7 +100,7 @@ small { @include fs(70);}
 
 - Préfixer les variables et mixin pour éviter les conflits ?
 - Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.
-- Si cela fonctionne, les variables du REM et des ratios pourront être uniformisé dans un tableau unique :  
+- Si cela fonctionne, les variables du REM et des ratios pourront être uniformisées dans un tableau unique :  
 
 ```css
 $fs-bp-ratio: (
