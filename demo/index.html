@@ -16,6 +16,8 @@
             <em >Responsive, Modular &amp; Flexible Typography</em>
         </header>
 
+        <code class="debug"></code>
+
         <h1>Lorem ipsum dolor sit amet <code>h1</code></h1>
 
         <h2>Lorem ipsum dolor sit amet <code>h2</code></h2>
@@ -33,7 +35,7 @@
 
             <h6>Lorem ipsum dolor sit amet <code>h6</code></h6>
 
-            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In inventore reiciendis labore.<code>small</code></small>
+            <small>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In inventore reiciendis labore. <code>small</code></small>
 
         </div>
 
@@ -42,5 +44,24 @@
         </footer>
 
     </div><!-- /#page -->
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+
+    $(function() {
+
+        // Display 1rem in px (by calcultaing the height of this 1rem heigth element)
+        function getFontSize() {
+            var debug = $('.debug')
+            console.log( "getFontSize!" );
+            debug.html(' | 1rem: '+debug.height()+'px');
+        }
+        getFontSize();
+        $(window).resize(function(){
+            getFontSize();
+        });
+    });
+    </script>
 </body>
 </html>

@@ -104,12 +104,28 @@
 .fs-70 {
   font-size: 0.75rem; }
 
+@media (min-width: 0) {
+  .debug:before {
+    content: "bp: 0 | ratio: 1.067"; } }
+
+@media (min-width: 500px) {
+  .debug:before {
+    content: "bp: 500px | ratio: 1.15"; } }
+
+@media (min-width: 992px) {
+  .debug:before {
+    content: "bp: 992px | ratio: 1.33"; } }
+
+@media (min-width: 1600px) {
+  .debug:before {
+    content: "bp: 1600px | ratio: 1.41"; } }
+
 html {
   font-size: 14px; }
 
 @media screen and (min-width: 500px) {
   html {
-    font-size: calc( 16px + ( strip-unit(22px) - strip-unit(16px) ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); } }
+    font-size: calc( 16px + ( 22 - 16 ) * ( 100vw - 500px ) / ( 1900 - 500 )); } }
 
 @media screen and (min-width: 1900px) {
   html {
@@ -222,7 +238,16 @@ header {
 code {
   font-size: 0.75rem;
   color: darkorange;
-  font-weight: 400; }
+  font-weight: 400;
+  font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
+
+.debug {
+  background-color: dimgray;
+  height: 1rem;
+  line-height: 1rem;
+  padding: 0 0.33rem;
+  display: inline-block;
+  margin-bottom: 2rem; }
 
 .max-width {
   max-width: 40em; }

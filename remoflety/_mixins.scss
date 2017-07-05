@@ -21,12 +21,23 @@
 // Création des classes de font-size .fs-10 {}…
 @each $key, $val in $fs-map {
     @if $key < 10 {
-        .fs-0#{$key} {
+        .#{$fs-class-prefix}0#{$key} {
             @include fs($key)
         }
     } @else {
-        .fs-#{$key} {
+        .#{$fs-class-prefix}#{$key} {
             @include fs($key)
+        }
+    }
+}
+
+// Mixin d'affichage des ratio si $debug;
+@if $debug {
+    .debug:before {
+        @each $bp, $ratio in $fs-ratios {
+            @media (min-width: $bp) {
+                content: 'bp: #{$bp} | ratio: #{$ratio}';
+            }
         }
     }
 }

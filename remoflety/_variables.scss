@@ -3,6 +3,9 @@
 //        VARIABLES
 // ----------------------------------------
 
+$debug: true !default;
+
+
 // Ratios gadgets
 $double-octave    : 4                 ;
 $pi               : 3.14159265359     ;
@@ -56,6 +59,9 @@ $fs-map: (
     60: .8rem, // H6, pas de ratio en dessou de la base
     70: .75rem
 ) !default;
+
+// Prefix des noms des classes de font-size '.fs-XX'  :
+$fs-class-prefix: 'fs-' !default;
 
 
 // Variables sans unités. Ne pas toucher

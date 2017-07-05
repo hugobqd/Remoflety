@@ -37,14 +37,25 @@ header {
     line-height: 1rem;
 }
 code {
+    // MIXIN :
     @include fs(70);
     color: darkorange;
     font-weight: 400;
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+}
+.debug {
+    background-color: dimgray;
+    height: 1rem;
+    line-height: 1rem;
+    padding: 0 0.33rem;
+    display: inline-block;
+    margin-bottom: 2rem;
 }
 .max-width {
     max-width: 40em;
 }
 footer {
+    // MIXIN :
     @include fs(70);
     padding: 2rem 0;
 }
