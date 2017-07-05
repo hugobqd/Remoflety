@@ -98,6 +98,7 @@ small { @include fs(70);}
 
 ### TODO
 
+- Préfixer les variables et mixin pour éviter les conflits ?
 - Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.
 - Si cela fonctionne, les variables du REM et des ratios pourront être uniformisé dans un tableau unique :  
 
