@@ -1,4 +1,4 @@
-# Remoflety 
+# Remoflety
 ## Responsive, modular & flexible typography
 
 - Base REM Responsive calculée selon le viewport.
@@ -11,9 +11,9 @@
 - Inclure les variables `remoflety/_variables.scss` dans son fichier de variables (facultatif).
 - Modifier les variables (supprimer `'!default` si les variables sont copiées).
 
-## Configurer :
+## Configurer
 
-### Les variables du font-size global
+### Variables du font-size global
 La typographie est réglé en *rem*, le font-size du HTML sert donc de base. Il évolue selon des breakpoint et un calcul incluant la largeur de l'écran (*vw*)
 - Font-size fixe de base initial (mobile-first) : `$fs-xs`
 - Font-size responsive minimum : `$fs-min`
@@ -21,19 +21,19 @@ La typographie est réglé en *rem*, le font-size du HTML sert donc de base. Il 
 - Breakpoint correspondant au font-size responsive minimum : `$fs-min-bp`
 - Breakpoint correspondant au font-size responsive maximum : `$fs-max-bp`
 
-### Les ratios d'échelle modulaires
+### Variable des ratios d'échelle modulaires
 Un ratio permet de définir une harmonie de taille entre les différentes tailles typographiques (comme les titres).
 Au départ les niveaux ont peu de différences de taille les uns par rapport aux autres grâce à un petit ratio. Des ratios plus grand correspondant à des breakpoints sont donc définis:
 
 ```css
 $fs-ratios: (
-    0: 1.067,
-    500px: 1.15,
-    992px: 1.33
+  0: 1.067,
+  500px: 1.15,
+  992px: 1.33
 );
 ```
 
-### Les niveaux de font-size
+### Variable des niveaux de font-size
 
 Définir un jeu de niveaux de font-size et leurs niveaux correspondants sur l'échelle modulaire. Pour une simplicité d'utilisation les chiffres doivent correspondre au niveau de titrage, exemple 10 pour les h1, 20 pour les h2, etc. Chaque niveau sera applicable grâce à un mixin Scss `@include fs(10)`, ou une classe HTML `.fs-10`.
 Ces ratios peuvent être définis en nombre entier (`2`) ou décimal (`2.7`).
@@ -41,12 +41,13 @@ Il est aussi possible de définir des valeurs en `rem` plutôt qu'en ratio (voir
 
 ```css
 $fs-map: (
-10: 4,
-20: 3,
-30: 2,
-40: 1,
-50: 0,
-60: .75rem );
+  10: 4,
+  20: 3,
+  30: 2,
+  40: 1,
+  50: 0,
+  60: .75rem
+);
 ```
 
 - ici c'est le niveau "50" qui a été définie à un font-size de 1rem (car aucun ratio ne lui est appliqué), il est donc égual au font-size de base de la page.
@@ -67,13 +68,19 @@ $fs-map: (
 );
 ```
 
-### Intégration
+### Autres variables
+
+- `$debug`: si `true` affiche le Breakpoint actuel et le ratio correspondant.
+- `$fs-class-prefix`: Prefix des noms des classes de font-size '.fs-XX'. Default: `'fs-'`;
+
+
+## Intégration
 
 Lorsque les variables sont configurées, les niveaux de font-size sont disponibles est exploitables avec le mixin `fs(XX)` ou les classes `.fs-XX`.
 
-```css
+```scss
 .toto {
-    @include fs(10);
+  @include fs(10);
 }
 ```
 
@@ -96,7 +103,7 @@ h6, .h6, label { @include fs(60);}
 small { @include fs(70);}
 ```
 
-### TODO
+## TODO
 
 - Préfixer les variables et mixin pour éviter les conflits ?
 - Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.
@@ -104,9 +111,12 @@ small { @include fs(70);}
 
 ```css
 $fs-bp-ratio: (
-    0:      ( 14px, 1.06),
-    480px:  ( 14px, 1.06),
-    768px:  ( 16px, 1.25),
-    1900px: ( 22px, 1.41)
+  0:      ( 14px, 1.06),
+  480px:  ( 14px, 1.06),
+  768px:  ( 16px, 1.25),
+  1900px: ( 22px, 1.41)
 );
 ```
+
+## Bugs
+- Sur la demo, .fs-45 vari trop autour de 824px de VW. Ressemble à une modification du letter-spacing.
