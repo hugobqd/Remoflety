@@ -1,21 +1,51 @@
 @charset "UTF-8";
-.fs-05 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 0) {
+  .fs-05 {
+    font-size: 2.02729rem; } }
 
-.fs-10 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 1600px) {
+  .fs-05 {
+    font-size: 7.99988rem; } }
 
-.fs-20 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 0) {
+  .fs-10 {
+    font-size: 1.80203rem; } }
 
-.fs-30 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 1600px) {
+  .fs-10 {
+    font-size: 5.65678rem; } }
 
-.fs-40 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 0) {
+  .fs-20 {
+    font-size: 1.60181rem; } }
 
-.fs-45 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 1600px) {
+  .fs-20 {
+    font-size: 3.99996rem; } }
+
+@media (min-width: 0) {
+  .fs-30 {
+    font-size: 1.42383rem; } }
+
+@media (min-width: 1600px) {
+  .fs-30 {
+    font-size: 2.82841rem; } }
+
+@media (min-width: 0) {
+  .fs-40 {
+    font-size: 1.26562rem; } }
+
+@media (min-width: 1600px) {
+  .fs-40 {
+    font-size: 1.99999rem; } }
+
+@media (min-width: 0) {
+  .fs-45 {
+    font-size: 1.16546rem; } }
+
+@media (min-width: 1600px) {
+  .fs-45 {
+    font-size: 1.56916rem; } }
 
 .fs-50 {
   font-size: 1rem; }
@@ -37,17 +67,37 @@ html {
   html {
     font-size: 22px; } }
 
-h1, .h1 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 0) {
+  h1, .h1 {
+    font-size: 1.80203rem; } }
 
-h2, .h2 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 1600px) {
+  h1, .h1 {
+    font-size: 5.65678rem; } }
 
-h3, .h3 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 0) {
+  h2, .h2 {
+    font-size: 1.60181rem; } }
 
-h4, .h4 {
-  font-size: calc( 16px *  + ( strip-unit(22px) *  - strip-unit(16px) *  ) * ( 100vw - 500px ) / ( strip-unit(1900px) - strip-unit(500px) )); }
+@media (min-width: 1600px) {
+  h2, .h2 {
+    font-size: 3.99996rem; } }
+
+@media (min-width: 0) {
+  h3, .h3 {
+    font-size: 1.42383rem; } }
+
+@media (min-width: 1600px) {
+  h3, .h3 {
+    font-size: 2.82841rem; } }
+
+@media (min-width: 0) {
+  h4, .h4 {
+    font-size: 1.26562rem; } }
+
+@media (min-width: 1600px) {
+  h4, .h4 {
+    font-size: 1.99999rem; } }
 
 h5, .h5 {
   font-size: 1rem; }
