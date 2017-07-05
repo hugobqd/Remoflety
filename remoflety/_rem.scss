@@ -2,12 +2,6 @@
 //        HTML FONT-SIZE (pour REM)
 // ----------------------------------------
 
-// var strip-unit
-$fs-min-no-unit: strip-unit($fs-min);
-$fs-max-no-unit: strip-unit($fs-max);
-$fs-min-bp-no-unit: strip-unit($fs-min-bp);
-$fs-max-bp-no-unit: strip-unit($fs-max-bp);
-
 // Older browsers and mobile
 html { font-size: $fs-xs; }
 

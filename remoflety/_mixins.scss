@@ -6,11 +6,20 @@
 // Usage .toto { @include fs(10); } // = font-size du H1
 @mixin fs($key) {
     @if unit( map-get($fs-map, $key) ) == '' {
-        @each $bp, $ratio in $fs-ratios {
-            @media (min-width: $bp) {
-                font-size: pow($ratio, map-get($fs-map, $key)) * 1rem;
-            }
-        }
+        // C'est un ratio (entier, sans unité)
+        // fs: calc( 16px * 2 + ( 22 * 4 - 16 * 2 ) * ( 100vw - 500px ) / ( 1900 - 500 ));
+
+        font-size: calc( #{$fs-min} * #{map-get($fs-map, 0)} + ( #{$fs-max-no-unit} * #{map-get($fs-map, 1600px)} - #{$fs-min-no-unit} * #{map-get($fs-map, 0)} ) * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
+
+
+
+
+        // --- Ratio fixes changeant au breakpoint ---
+        // @each $bp, $ratio in $fs-ratios {
+        //     @media (min-width: $bp) {
+        //         font-size: pow($ratio, map-get($fs-map, $key)) * 1rem;
+        //     }
+        // }
     } @else {
         font-size: map-get($fs-map, $key);
     }
