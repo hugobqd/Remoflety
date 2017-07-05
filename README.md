@@ -1,4 +1,5 @@
 # Remoflety
+
 ## Responsive, modular & flexible typography
 
 - Base REM Responsive calculée selon le viewport.
@@ -59,12 +60,12 @@ $fs-map: (
 
 ```css
 $fs-map: (
-05: 6,
-10: 4,
-15: 3.5,
-20: 3,
-…
-70: .5rem;
+  05: 6,
+  10: 4,
+  15: 3.5,
+  20: 3,
+  …
+  70: .5rem;
 );
 ```
 
@@ -90,9 +91,8 @@ Lorsque les variables sont configurées, les niveaux de font-size sont disponibl
 
 Il est aussi préférable d'initialiser sa feuille de style :
 
-```
-css
-/* remoflety/_assignment.scss *
+```css
+/* remoflety/_assignment.scss */
 
 h1, .h1 { @include fs(10);}
 h2, .h2 { @include fs(20);}
@@ -119,4 +119,4 @@ $fs-bp-ratio: (
 ```
 
 ## Bugs
-- Sur la demo, .fs-45 vari trop autour de 824px de VW. Ressemble à une modification du letter-spacing.
+- Sur la demo: .fs-45 vari trop autour de 824px de VW. Ressemble à une modification du letter-spacing.
