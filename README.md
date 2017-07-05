@@ -1,4 +1,5 @@
-# Remoflety ## Responsive, modular & flexible typography
+# Remoflety 
+## Responsive, modular & flexible typography
 
 - Base REM Responsive calculée selon le viewport.
 - Ratios des niveaux de font-size augmentés aux breakpoints
