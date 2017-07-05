@@ -1,51 +1,99 @@
 @charset "UTF-8";
 @media (min-width: 0) {
   .fs-05 {
-    font-size: 2.02729rem; } }
+    font-size: 1.47566rem; } }
+
+@media (min-width: 500px) {
+  .fs-05 {
+    font-size: 2.31306rem; } }
+
+@media (min-width: 992px) {
+  .fs-05 {
+    font-size: 5.5349rem; } }
 
 @media (min-width: 1600px) {
   .fs-05 {
-    font-size: 7.99988rem; } }
+    font-size: 7.85805rem; } }
 
 @media (min-width: 0) {
   .fs-10 {
-    font-size: 1.80203rem; } }
+    font-size: 1.383rem; } }
+
+@media (min-width: 500px) {
+  .fs-10 {
+    font-size: 2.01136rem; } }
+
+@media (min-width: 992px) {
+  .fs-10 {
+    font-size: 4.16158rem; } }
 
 @media (min-width: 1600px) {
   .fs-10 {
-    font-size: 5.65678rem; } }
+    font-size: 5.57308rem; } }
 
 @media (min-width: 0) {
   .fs-20 {
-    font-size: 1.60181rem; } }
+    font-size: 1.29616rem; } }
+
+@media (min-width: 500px) {
+  .fs-20 {
+    font-size: 1.74901rem; } }
+
+@media (min-width: 992px) {
+  .fs-20 {
+    font-size: 3.12901rem; } }
 
 @media (min-width: 1600px) {
   .fs-20 {
-    font-size: 3.99996rem; } }
+    font-size: 3.95254rem; } }
 
 @media (min-width: 0) {
   .fs-30 {
-    font-size: 1.42383rem; } }
+    font-size: 1.21477rem; } }
+
+@media (min-width: 500px) {
+  .fs-30 {
+    font-size: 1.52087rem; } }
+
+@media (min-width: 992px) {
+  .fs-30 {
+    font-size: 2.35264rem; } }
 
 @media (min-width: 1600px) {
   .fs-30 {
-    font-size: 2.82841rem; } }
+    font-size: 2.80322rem; } }
 
 @media (min-width: 0) {
   .fs-40 {
-    font-size: 1.26562rem; } }
+    font-size: 1.13849rem; } }
+
+@media (min-width: 500px) {
+  .fs-40 {
+    font-size: 1.3225rem; } }
+
+@media (min-width: 992px) {
+  .fs-40 {
+    font-size: 1.7689rem; } }
 
 @media (min-width: 1600px) {
   .fs-40 {
-    font-size: 1.99999rem; } }
+    font-size: 1.9881rem; } }
 
 @media (min-width: 0) {
   .fs-45 {
-    font-size: 1.16546rem; } }
+    font-size: 1.067rem; } }
+
+@media (min-width: 500px) {
+  .fs-45 {
+    font-size: 1.15rem; } }
+
+@media (min-width: 992px) {
+  .fs-45 {
+    font-size: 1.33rem; } }
 
 @media (min-width: 1600px) {
   .fs-45 {
-    font-size: 1.56916rem; } }
+    font-size: 1.41rem; } }
 
 .fs-50 {
   font-size: 1rem; }
@@ -69,35 +117,67 @@ html {
 
 @media (min-width: 0) {
   h1, .h1 {
-    font-size: 1.80203rem; } }
+    font-size: 1.383rem; } }
+
+@media (min-width: 500px) {
+  h1, .h1 {
+    font-size: 2.01136rem; } }
+
+@media (min-width: 992px) {
+  h1, .h1 {
+    font-size: 4.16158rem; } }
 
 @media (min-width: 1600px) {
   h1, .h1 {
-    font-size: 5.65678rem; } }
+    font-size: 5.57308rem; } }
 
 @media (min-width: 0) {
   h2, .h2 {
-    font-size: 1.60181rem; } }
+    font-size: 1.29616rem; } }
+
+@media (min-width: 500px) {
+  h2, .h2 {
+    font-size: 1.74901rem; } }
+
+@media (min-width: 992px) {
+  h2, .h2 {
+    font-size: 3.12901rem; } }
 
 @media (min-width: 1600px) {
   h2, .h2 {
-    font-size: 3.99996rem; } }
+    font-size: 3.95254rem; } }
 
 @media (min-width: 0) {
   h3, .h3 {
-    font-size: 1.42383rem; } }
+    font-size: 1.21477rem; } }
+
+@media (min-width: 500px) {
+  h3, .h3 {
+    font-size: 1.52087rem; } }
+
+@media (min-width: 992px) {
+  h3, .h3 {
+    font-size: 2.35264rem; } }
 
 @media (min-width: 1600px) {
   h3, .h3 {
-    font-size: 2.82841rem; } }
+    font-size: 2.80322rem; } }
 
 @media (min-width: 0) {
   h4, .h4 {
-    font-size: 1.26562rem; } }
+    font-size: 1.13849rem; } }
+
+@media (min-width: 500px) {
+  h4, .h4 {
+    font-size: 1.3225rem; } }
+
+@media (min-width: 992px) {
+  h4, .h4 {
+    font-size: 1.7689rem; } }
 
 @media (min-width: 1600px) {
   h4, .h4 {
-    font-size: 1.99999rem; } }
+    font-size: 1.9881rem; } }
 
 h5, .h5 {
   font-size: 1rem; }
