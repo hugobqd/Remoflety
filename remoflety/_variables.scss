@@ -38,8 +38,10 @@ $fs-max-bp: 1900px !default;
 
 // Ratios des font-sizes selon breakpoints
 $fs-ratios: (
-    0: $major-second,
-    1600px: $augmented-fourth
+    0: 1.067,
+    500px: 1.15,
+    992px: 1.33,
+    1600px: 1.41
 ) !default;
 
 // Classes de font-sizes et puissance des rations
@@ -49,7 +51,7 @@ $fs-map: (
     20: 4, // H2
     30: 3, // H3
     40: 2, // H4
-    45: 1.3, // intermediaire : .fs-45
+    45: 1, // intermediaire : .fs-45
     50: 1rem, // Base, H5, p. 1rem = ratio '0'
     60: .8rem, // H6, pas de ratio en dessou de la base
     70: .75rem
