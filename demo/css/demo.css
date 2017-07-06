@@ -191,7 +191,8 @@ body {
   font-family: 'Zilla Slab', sans-serif;
   padding: 1rem;
   line-height: 1.4em;
-  background-color: lightslategrey; }
+  background-color: aliceblue;
+  color: midnightblue; }
   body:before {
     content: '⋰';
     position: absolute;
@@ -201,11 +202,11 @@ body {
     height: 1rem;
     line-height: 1rem;
     text-align: center;
-    background: darkorange;
-    color: lightslategrey; }
+    background: darkturquoise;
+    color: aliceblue; }
 
 a {
-  color: darkorange; }
+  color: dodgerblue; }
 
 h1, h2, h3, h4, h5, h6, .title {
   font-weight: 700;
@@ -216,7 +217,7 @@ p {
   margin: .5rem 0; }
 
 header {
-  color: darkorange;
+  color: darkturquoise;
   margin-bottom: 1rem;
   line-height: 1rem; }
 
@@ -224,12 +225,12 @@ code {
   /* @@debug current ratio 1: 1.0741 */
   /* @@debug current ratio 2: 1.28705 */
   font-size: 0.75rem;
-  color: darkorange;
+  color: dodgerblue;
   font-weight: 400;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
 
 .debug {
-  background-color: dimgray;
+  background-color: midnightblue;
   height: 1rem;
   line-height: 1rem;
   padding: 0 0.33rem;
