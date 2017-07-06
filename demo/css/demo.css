@@ -1,61 +1,61 @@
 @charset "UTF-8";
 .fs-10 {
   /* @@debug current ratio 1: 1.4641 */
-  /* @@debug current ratio 2: 3.8416 */
+  /* @@debug current ratio 2: 5.0625 */
   font-size: 1.4641rem; }
   @media screen and (min-width: 480px) {
     .fs-10 {
-      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 23.4256px + 98.0744 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-10 {
-      font-size: 3.8416rem; } }
+      font-size: 5.0625rem; } }
 
 .fs-20 {
   /* @@debug current ratio 1: 1.331 */
-  /* @@debug current ratio 2: 2.744 */
+  /* @@debug current ratio 2: 3.375 */
   font-size: 1.331rem; }
   @media screen and (min-width: 480px) {
     .fs-20 {
-      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 21.296px + 59.704 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-20 {
-      font-size: 2.744rem; } }
+      font-size: 3.375rem; } }
 
 .fs-30 {
   /* @@debug current ratio 1: 1.21 */
-  /* @@debug current ratio 2: 1.96 */
+  /* @@debug current ratio 2: 2.25 */
   font-size: 1.21rem; }
   @media screen and (min-width: 480px) {
     .fs-30 {
-      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 19.36px + 34.64 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-30 {
-      font-size: 1.96rem; } }
+      font-size: 2.25rem; } }
 
 .fs-40 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1.1rem; }
   @media screen and (min-width: 480px) {
     .fs-40 {
-      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 17.6px + 18.4 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-40 {
-      font-size: 1.4rem; } }
+      font-size: 1.5rem; } }
 
 .fs-50 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1rem; }
 
 .fs-60 {
   /* @@debug current ratio 1: 1.07923 */
-  /* @@debug current ratio 2: 1.30889 */
+  /* @@debug current ratio 2: 1.38316 */
   font-size: 0.8rem; }
 
 .fs-70 {
   /* @@debug current ratio 1: 1.0741 */
-  /* @@debug current ratio 2: 1.28705 */
+  /* @@debug current ratio 2: 1.3554 */
   font-size: 0.75rem; }
 
 html {
@@ -63,128 +63,128 @@ html {
 
 @media screen and (min-width: 480px) {
   html {
-    font-size: calc( 16px + 6 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+    font-size: calc( 16px + 8 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1800px) {
   html {
-    font-size: 22px; } }
+    font-size: 24px; } }
 
 .fs-10 {
   /* @@debug current ratio 1: 1.4641 */
-  /* @@debug current ratio 2: 3.8416 */
+  /* @@debug current ratio 2: 5.0625 */
   font-size: 1.4641rem; }
   @media screen and (min-width: 480px) {
     .fs-10 {
-      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 23.4256px + 98.0744 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-10 {
-      font-size: 3.8416rem; } }
+      font-size: 5.0625rem; } }
 
 .fs-20 {
   /* @@debug current ratio 1: 1.331 */
-  /* @@debug current ratio 2: 2.744 */
+  /* @@debug current ratio 2: 3.375 */
   font-size: 1.331rem; }
   @media screen and (min-width: 480px) {
     .fs-20 {
-      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 21.296px + 59.704 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-20 {
-      font-size: 2.744rem; } }
+      font-size: 3.375rem; } }
 
 .fs-30 {
   /* @@debug current ratio 1: 1.21 */
-  /* @@debug current ratio 2: 1.96 */
+  /* @@debug current ratio 2: 2.25 */
   font-size: 1.21rem; }
   @media screen and (min-width: 480px) {
     .fs-30 {
-      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 19.36px + 34.64 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-30 {
-      font-size: 1.96rem; } }
+      font-size: 2.25rem; } }
 
 .fs-40 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1.1rem; }
   @media screen and (min-width: 480px) {
     .fs-40 {
-      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 17.6px + 18.4 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     .fs-40 {
-      font-size: 1.4rem; } }
+      font-size: 1.5rem; } }
 
 .fs-50 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1rem; }
 
 .fs-60 {
   /* @@debug current ratio 1: 1.07923 */
-  /* @@debug current ratio 2: 1.30889 */
+  /* @@debug current ratio 2: 1.38316 */
   font-size: 0.8rem; }
 
 .fs-70 {
   /* @@debug current ratio 1: 1.0741 */
-  /* @@debug current ratio 2: 1.28705 */
+  /* @@debug current ratio 2: 1.3554 */
   font-size: 0.75rem; }
 
 h1, .h1 {
   /* @@debug current ratio 1: 1.4641 */
-  /* @@debug current ratio 2: 3.8416 */
+  /* @@debug current ratio 2: 5.0625 */
   font-size: 1.4641rem; }
   @media screen and (min-width: 480px) {
     h1, .h1 {
-      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 23.4256px + 98.0744 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     h1, .h1 {
-      font-size: 3.8416rem; } }
+      font-size: 5.0625rem; } }
 
 h2, .h2 {
   /* @@debug current ratio 1: 1.331 */
-  /* @@debug current ratio 2: 2.744 */
+  /* @@debug current ratio 2: 3.375 */
   font-size: 1.331rem; }
   @media screen and (min-width: 480px) {
     h2, .h2 {
-      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 21.296px + 59.704 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     h2, .h2 {
-      font-size: 2.744rem; } }
+      font-size: 3.375rem; } }
 
 h3, .h3 {
   /* @@debug current ratio 1: 1.21 */
-  /* @@debug current ratio 2: 1.96 */
+  /* @@debug current ratio 2: 2.25 */
   font-size: 1.21rem; }
   @media screen and (min-width: 480px) {
     h3, .h3 {
-      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 19.36px + 34.64 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     h3, .h3 {
-      font-size: 1.96rem; } }
+      font-size: 2.25rem; } }
 
 h4, .h4 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1.1rem; }
   @media screen and (min-width: 480px) {
     h4, .h4 {
-      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 17.6px + 18.4 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     h4, .h4 {
-      font-size: 1.4rem; } }
+      font-size: 1.5rem; } }
 
 h5, .h5 {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1rem; }
 
 h6, .h6, label {
   /* @@debug current ratio 1: 1.07923 */
-  /* @@debug current ratio 2: 1.30889 */
+  /* @@debug current ratio 2: 1.38316 */
   font-size: 0.8rem; }
 
 small {
   /* @@debug current ratio 1: 1.0741 */
-  /* @@debug current ratio 2: 1.28705 */
+  /* @@debug current ratio 2: 1.3554 */
   font-size: 0.75rem; }
 
 body {
@@ -223,7 +223,7 @@ header {
 
 code {
   /* @@debug current ratio 1: 1.0741 */
-  /* @@debug current ratio 2: 1.28705 */
+  /* @@debug current ratio 2: 1.3554 */
   font-size: 0.75rem;
   color: dodgerblue;
   font-weight: 400;
@@ -242,16 +242,16 @@ code {
 
 footer {
   /* @@debug current ratio 1: 1.1 */
-  /* @@debug current ratio 2: 1.4 */
+  /* @@debug current ratio 2: 1.5 */
   font-size: 1.1rem;
   height: 1em;
   line-height: 1em;
   margin: 2rem 0; }
   @media screen and (min-width: 480px) {
     footer {
-      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 17.6px + 18.4 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
+  @media screen and (min-width: 1800px) {
     footer {
-      font-size: 1.4rem; } }
+      font-size: 1.5rem; } }
 
 /*# sourceMappingURL=demo.css.map */

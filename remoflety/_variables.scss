@@ -37,15 +37,15 @@ $minor-second     : 1.066666667       ;
 $fs-bigmap: (
     (
         break: 480px,
-        fsize: 16px,
+        fsize: 15px,
         ratio: 1.1
     ),
     (
         break: 1600px,
-        fsize: 22px,
+        fsize: 20px,
         ratio: 1.4
     )
-);
+) !default;
 
 // Classes de font-sizes et puissance des rations
 $fs-map: (
