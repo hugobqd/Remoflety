@@ -249,10 +249,15 @@ small {
   /* @@debug current ratio 2: 1.31214 */
   font-size: 0.67rem; }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -274,7 +279,8 @@ body {
     line-height: 1rem;
     text-align: center;
     background: darkturquoise;
-    color: aliceblue; }
+    color: aliceblue;
+    z-index: 1; }
 
 a {
   color: dodgerblue; }
@@ -333,7 +339,8 @@ code {
   display: inline-block;
   margin-bottom: 1rem;
   margin-right: 1rem;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-weight: 600; }
 
 .max-width {
   max-width: 40em;
