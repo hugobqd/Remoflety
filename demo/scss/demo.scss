@@ -11,8 +11,8 @@
 $fs-bigmap: (
     (
         break: 480px,
-        fsize: 16px,
-        ratio: 1.1
+        fsize: 15px,
+        ratio: 1.12
     ),
     (
         break: 1800px,
@@ -23,13 +23,15 @@ $fs-bigmap: (
 
 // Classes de font-sizes et puissance des rations
 $fs-map: (
+    05: 6, // juste gigantesque
     10: 4, // H1
     20: 3, // H2
     30: 2, // H3
     40: 1, // H4
-    50: 1rem, // Base, H5, p. 1rem = ratio '0'
-    60: .8rem, // H6, pas de ratio en dessou de la base
-    70: .75rem
+    45: .25, // intermediaire, juste un peu plus grand que 50
+    50: 0, // Base, H5, p. 1rem = ratio '0'
+    60: .85rem, // H6, pas de ratio en dessou de la base
+    70: .67rem
 );
 
 // Magic :
@@ -37,10 +39,20 @@ $fs-map: (
 
 
 // Styles
+// -----------------------------
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
     font-family: 'Zilla Slab', sans-serif;
     padding: 1rem;
-    line-height: 1.4em;
+    line-height: 1.4;
     background-color: aliceblue;
     color: midnightblue;
     &:before {
@@ -59,6 +71,9 @@ body {
 a {
     color: dodgerblue;
 }
+a:hover {
+    color: mediumblue
+}
 h1, h2, h3, h4, h5, h6, .title {
     font-weight: 700;
     line-height: 1em;
@@ -69,8 +84,8 @@ p {
 }
 header {
     color: darkturquoise;
-    margin-bottom: 1rem;
-    line-height: 1rem;
+    margin-bottom: 1em;
+    line-height: 1em;
 }
 code {
     // MIXIN :
@@ -79,16 +94,36 @@ code {
     font-weight: 400;
     font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
 }
+.toolbar {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    line-height: 1rem;
+    color: dodgerblue;
+    span {
+        display: inline-block;
+    }
+    a {
+        margin: 0 .25em;
+        display: inline-block;
+    }
+}
 .debug {
     background-color: midnightblue;
+    color: darkturquoise;
     height: 1rem;
     line-height: 1rem;
-    padding: 0 0.33rem;
+    padding: 0 0.5rem;
     display: inline-block;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    border-radius: 2px;
+
 }
 .max-width {
     max-width: 40em;
+    display: inline-block;
 }
 footer {
     // MIXIN :

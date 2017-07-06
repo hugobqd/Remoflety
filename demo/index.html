@@ -12,46 +12,179 @@
 </head>
 <body>
     <div class="container">
-        <header class="fs-50">
+        <header data-select>
             <strong>Remoflety :</strong>
             <em >Responsive, Modular &amp; Flexible Typography</em>
         </header>
 
-        <code class="debug"></code>
+        <div class="toolbar">
+            <code class="debug"></code>
+            <nav class="">
+                Classes :
+                <span>
+                    <a id="select-init" href="#">&times; Réinitialiser</a>
+                    <a id="select-rand" href="#">⚄ Random</a>
+                    <a id="select-unif" href="#">= Uniformiser</a>
+                </span>
+            </nav>
+        </div>
 
-        <h1>Lorem ipsum dolor sit amet <code>h1</code></h1>
+        <h1 data-select>Moby-Dick or The Whale</h1>
 
-        <h2>Lorem ipsum dolor sit amet <code>h2</code></h2>
+        <h2 data-select>Moby-Dick or The Whale</h2>
 
-        <h3>Lorem ipsum dolor sit amet <code>h3</code></h3>
+        <h3 data-select>Moby-Dick or The Whale</h3>
 
-        <h4>Lorem ipsum dolor sit amet <code>h4</code></h4>
+        <h4 data-select>Moby-Dick or The Whale</h4>
 
         <br>
 
-        <div class="max-width">
-            <p>Call me Ishmael. Some years ago — never mind how long precisely having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation. <code>p</code></p><br>
-            <h5>Lorem ipsum dolor sit amet <code>h5</code></h5>
-            <p>Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me. <code>p</code></p>
+
+            <p data-select>
+                <span class="max-width">Call me Ishmael. Some years ago – never mind how long precisely having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world. It is a way I have of driving off the spleen and regulating the circulation.</p><br>
+            <h5 data-select>Whenever I find myself</span></h5>
+            <p data-select>
+                <span class="max-width">Whenever I find myself growing grim about the mouth; whenever it is a damp, drizzly November in my soul; whenever I find myself involuntarily pausing before coffin warehouses, and bringing up the rear of every funeral I meet; and especially whenever my hypos get such an upper hand of me, that it requires a strong moral principle to prevent me from deliberately stepping into the street, and methodically knocking people's hats off then, I account it high time to get to sea as soon as I can. This is my substitute for pistol and ball. With a philosophical flourish Cato throws himself upon his sword; I quietly take to the ship. There is nothing surprising in this. If they but knew it, almost all men in their degree, some time or other, cherish very nearly the same feelings towards the ocean with me.</span></p>
             <br>
 
-            <h6>Moby-Dick; or, The Whale by Herman Melville. <code>h6</code></h6>
+            <h6 data-select>Moby-Dick; or, The Whale by Herman Melville.</h6>
 
-            <small>Chapter 1 - Loomings <code>small</code></small>
+            <small data-select style="display:block; line-height: 1em">Chapter 1 - Loomings</small>
 
-        </div>
 
-        <footer>
+        <footer data-select>
             <a href="https://github.com/hugobqd/Remoflety">@github</a>
         </footer>
 
     </div><!-- /#page -->
 
 
+    <style media="screen">
+    .fs-switch-zone {
+        position: relative;
+    }
+    .fs-switch-zone:hover {
+        background-color: paleturquoise;
+        box-shadow: 0 0 2px 4px paleturquoise;
+    }
+    .fs-switch-wrapper {
+        position: absolute;
+        display: inline-block;
+        right: 0;
+        background: cyan;
+        height: 0.9em;
+    }
+    .fs-switch {
+        line-height: 1rem;
+        position: absolute;
+        bottom: 0;
+        width: 6rem;
+        height: 1rem;
+        right: 0;
+    }
+    .fs-switch code,
+    .fs-switch select {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-size: .7rem;
+      font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
+      /*border: 1px solid;
+      border-radius: 3px;*/
+    }
+    .fs-switch code {
+        text-align: right;
+        padding-left: .5em;
+        text-shadow: 1px 1px 0px aliceblue, -1px 1px 0px aliceblue, 1px -1px 0px aliceblue, -1px -1px 0px aliceblue;
+    }
+    .fs-switch select {
+        opacity: 0;
+        width: 100%;
+    }
+    .fs-switch-zone:hover .fs-switch select {
+        opacity: 1;
+    }
+
+    span.class-name {
+        color: royalblue;
+    }
+
+    </style>
+
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript">
 
     $(function() {
+
+        var fsSelect =
+        '<div class="fs-switch-wrapper">'+
+        '<div class="fs-switch">'+
+        '<code class="fs-tagcode" class="fs-70"></code>'+
+        '<select class="fs-70">'+
+        '<option value="">no class</option>'+
+        '<option value=".fs-05">.fs-05 (gigantesque)</option>'+
+        '<option value=".fs-10">.fs-10 (h1)</option>'+
+        '<option value=".fs-20">.fs-20 (h2)</option>'+
+        '<option value=".fs-30">.fs-30 (h3)</option>'+
+        '<option value=".fs-40">.fs-40 (h4)</option>'+
+        '<option value=".fs-45">.fs-45 (intermediaire)</option>'+
+        '<option value=".fs-50">.fs-50 (base)</option>'+
+        '<option value=".fs-60">.fs-60 (h6)</option>'+
+        '<option value=".fs-70">.fs-70 (small)</option>'+
+        '</select>'+
+        '</div>'+
+        '</div>'
+        ;
+
+        // $('#select-init').hide()
+
+        $('[data-select]').each(function(){
+            var t = $(this);
+            var tTag = t.prop("tagName").toLowerCase();
+            t.wrap( "<div class='fs-switch-zone'></div>" ).append(fsSelect).find('.fs-tagcode').text(tTag);
+        })
+
+        function addClassToElement($element, $fsClass) {
+            //var t = $(this);
+            //var element = t.closest('.fs-switch-zone').find('[data-select]');
+            // var fsClass = $(this).val();
+            $element.attr('class', $fsClass.replace('.',''));
+            $element.find('.fs-tagcode').html($element.prop("tagName").toLowerCase()+'<span class="class-name">'+$fsClass+'</span>');
+            // $('#select-init').fadeIn(300);
+        }
+
+        $('[data-select]').on('change', 'select', function() {
+            var element = $(this).closest('.fs-switch-zone').find('[data-select]');
+            var fsClass = $(this).val();
+            addClassToElement(element, fsClass);
+        });
+
+        $('#select-init').on('click', function(){
+            $('[data-select]').each(function(){
+                addClassToElement($(this), '');
+                $(this).find('select').val('');
+            });
+            // $(this).fadeOut(300);
+        });
+        $('#select-unif').on('click', function(){
+            $('[data-select]').each(function(){
+                addClassToElement($(this), '.fs-50');
+                $(this).find('select').val('.fs-50');
+            });
+        });
+        $('#select-rand').on('click', function(){
+            $('[data-select]').each(function(){
+                var rand =  Math.floor((Math.random() * 8) + 1 ) * 10;
+                if (rand == 80 ) { rand = 45; }
+                // if (rand == 90 ) { rand = '05'; } pas de gigantesque en random
+                rand = '.fs-'+ rand;
+
+                console.log('rand', rand)
+                addClassToElement($(this), rand);
+                $(this).find('select').val(rand);
+            });
+        });
+
 
         // Display 1rem in px (by calcultaing the height of this 1rem heigth element)
         function getFontSize() {
@@ -59,7 +192,7 @@
             var rempx = debug.height();
             var ratio = $('footer').height() / rempx ;
             console.log( "getFontSize!" );
-            debug.html('1rem: '+rempx+'px | ratio : '+ Math.round(ratio*1000)/1000 +'');
+            debug.html('1rem: '+rempx+'px | Ratio: '+ Math.round(ratio*1000)/1000 +'');
         }
         getFontSize();
         $(window).resize(function(){
