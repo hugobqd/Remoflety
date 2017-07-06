@@ -2,6 +2,7 @@
 //        HTML FONT-SIZE (pour REM)
 // ----------------------------------------
 
+
 // Older browsers and mobile
 html { font-size: $fs-xs; }
 
@@ -9,7 +10,7 @@ html { font-size: $fs-xs; }
 // https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png
 @media screen and (min-width: $fs-min-bp){
     html {
-        font-size: calc( #{$fs-min} + ( #{$fs-max-no-unit} - #{$fs-min-no-unit} ) * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
+        font-size: calc( #{$fs-min} + #{$fs-max-no-unit - $fs-min-no-unit} * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
     }
 }
 @media screen and (min-width: $fs-max-bp){

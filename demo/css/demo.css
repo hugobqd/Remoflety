@@ -1,215 +1,197 @@
 @charset "UTF-8";
-@media (min-width: 0) {
-  .fs-05 {
-    font-size: 1.47566rem; } }
+.fs-10 {
+  /* @@debug current ratio 1: 1.4641 */
+  /* @@debug current ratio 2: 3.8416 */
+  font-size: 1.4641rem; }
+  @media screen and (min-width: 480px) {
+    .fs-10 {
+      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-10 {
+      font-size: 3.8416rem; } }
 
-@media (min-width: 500px) {
-  .fs-05 {
-    font-size: 2.31306rem; } }
+.fs-20 {
+  /* @@debug current ratio 1: 1.331 */
+  /* @@debug current ratio 2: 2.744 */
+  font-size: 1.331rem; }
+  @media screen and (min-width: 480px) {
+    .fs-20 {
+      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-20 {
+      font-size: 2.744rem; } }
 
-@media (min-width: 992px) {
-  .fs-05 {
-    font-size: 5.5349rem; } }
+.fs-30 {
+  /* @@debug current ratio 1: 1.21 */
+  /* @@debug current ratio 2: 1.96 */
+  font-size: 1.21rem; }
+  @media screen and (min-width: 480px) {
+    .fs-30 {
+      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-30 {
+      font-size: 1.96rem; } }
 
-@media (min-width: 1600px) {
-  .fs-05 {
-    font-size: 7.85805rem; } }
-
-@media (min-width: 0) {
-  .fs-10 {
-    font-size: 1.383rem; } }
-
-@media (min-width: 500px) {
-  .fs-10 {
-    font-size: 2.01136rem; } }
-
-@media (min-width: 992px) {
-  .fs-10 {
-    font-size: 4.16158rem; } }
-
-@media (min-width: 1600px) {
-  .fs-10 {
-    font-size: 5.57308rem; } }
-
-@media (min-width: 0) {
-  .fs-20 {
-    font-size: 1.29616rem; } }
-
-@media (min-width: 500px) {
-  .fs-20 {
-    font-size: 1.74901rem; } }
-
-@media (min-width: 992px) {
-  .fs-20 {
-    font-size: 3.12901rem; } }
-
-@media (min-width: 1600px) {
-  .fs-20 {
-    font-size: 3.95254rem; } }
-
-@media (min-width: 0) {
-  .fs-30 {
-    font-size: 1.21477rem; } }
-
-@media (min-width: 500px) {
-  .fs-30 {
-    font-size: 1.52087rem; } }
-
-@media (min-width: 992px) {
-  .fs-30 {
-    font-size: 2.35264rem; } }
-
-@media (min-width: 1600px) {
-  .fs-30 {
-    font-size: 2.80322rem; } }
-
-@media (min-width: 0) {
-  .fs-40 {
-    font-size: 1.13849rem; } }
-
-@media (min-width: 500px) {
-  .fs-40 {
-    font-size: 1.3225rem; } }
-
-@media (min-width: 992px) {
-  .fs-40 {
-    font-size: 1.7689rem; } }
-
-@media (min-width: 1600px) {
-  .fs-40 {
-    font-size: 1.9881rem; } }
-
-@media (min-width: 0) {
-  .fs-45 {
-    font-size: 1.067rem; } }
-
-@media (min-width: 500px) {
-  .fs-45 {
-    font-size: 1.15rem; } }
-
-@media (min-width: 992px) {
-  .fs-45 {
-    font-size: 1.33rem; } }
-
-@media (min-width: 1600px) {
-  .fs-45 {
-    font-size: 1.41rem; } }
+.fs-40 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
+  font-size: 1.1rem; }
+  @media screen and (min-width: 480px) {
+    .fs-40 {
+      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-40 {
+      font-size: 1.4rem; } }
 
 .fs-50 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
   font-size: 1rem; }
 
 .fs-60 {
+  /* @@debug current ratio 1: 1.07923 */
+  /* @@debug current ratio 2: 1.30889 */
   font-size: 0.8rem; }
 
 .fs-70 {
+  /* @@debug current ratio 1: 1.0741 */
+  /* @@debug current ratio 2: 1.28705 */
   font-size: 0.75rem; }
 
-@media (min-width: 0) {
-  .debug:before {
-    content: "bp: 0 | ratio: 1.067"; } }
-
-@media (min-width: 500px) {
-  .debug:before {
-    content: "bp: 500px | ratio: 1.15"; } }
-
-@media (min-width: 992px) {
-  .debug:before {
-    content: "bp: 992px | ratio: 1.33"; } }
-
-@media (min-width: 1600px) {
-  .debug:before {
-    content: "bp: 1600px | ratio: 1.41"; } }
-
 html {
-  font-size: 14px; }
+  font-size: 16px; }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 480px) {
   html {
-    font-size: calc( 16px + ( 22 - 16 ) * ( 100vw - 500px ) / ( 1900 - 500 )); } }
+    font-size: calc( 16px + 6 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
 
-@media screen and (min-width: 1900px) {
+@media screen and (min-width: 1600px) {
   html {
     font-size: 22px; } }
 
-@media (min-width: 0) {
-  h1, .h1 {
-    font-size: 1.383rem; } }
+.fs-10 {
+  /* @@debug current ratio 1: 1.4641 */
+  /* @@debug current ratio 2: 3.8416 */
+  font-size: 1.4641rem; }
+  @media screen and (min-width: 480px) {
+    .fs-10 {
+      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-10 {
+      font-size: 3.8416rem; } }
 
-@media (min-width: 500px) {
-  h1, .h1 {
-    font-size: 2.01136rem; } }
+.fs-20 {
+  /* @@debug current ratio 1: 1.331 */
+  /* @@debug current ratio 2: 2.744 */
+  font-size: 1.331rem; }
+  @media screen and (min-width: 480px) {
+    .fs-20 {
+      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-20 {
+      font-size: 2.744rem; } }
 
-@media (min-width: 992px) {
-  h1, .h1 {
-    font-size: 4.16158rem; } }
+.fs-30 {
+  /* @@debug current ratio 1: 1.21 */
+  /* @@debug current ratio 2: 1.96 */
+  font-size: 1.21rem; }
+  @media screen and (min-width: 480px) {
+    .fs-30 {
+      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-30 {
+      font-size: 1.96rem; } }
 
-@media (min-width: 1600px) {
-  h1, .h1 {
-    font-size: 5.57308rem; } }
+.fs-40 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
+  font-size: 1.1rem; }
+  @media screen and (min-width: 480px) {
+    .fs-40 {
+      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    .fs-40 {
+      font-size: 1.4rem; } }
 
-@media (min-width: 0) {
-  h2, .h2 {
-    font-size: 1.29616rem; } }
+.fs-50 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
+  font-size: 1rem; }
 
-@media (min-width: 500px) {
-  h2, .h2 {
-    font-size: 1.74901rem; } }
+.fs-60 {
+  /* @@debug current ratio 1: 1.07923 */
+  /* @@debug current ratio 2: 1.30889 */
+  font-size: 0.8rem; }
 
-@media (min-width: 992px) {
-  h2, .h2 {
-    font-size: 3.12901rem; } }
+.fs-70 {
+  /* @@debug current ratio 1: 1.0741 */
+  /* @@debug current ratio 2: 1.28705 */
+  font-size: 0.75rem; }
 
-@media (min-width: 1600px) {
-  h2, .h2 {
-    font-size: 3.95254rem; } }
+h1, .h1 {
+  /* @@debug current ratio 1: 1.4641 */
+  /* @@debug current ratio 2: 3.8416 */
+  font-size: 1.4641rem; }
+  @media screen and (min-width: 480px) {
+    h1, .h1 {
+      font-size: calc( 23.4256px + 61.0896 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    h1, .h1 {
+      font-size: 3.8416rem; } }
 
-@media (min-width: 0) {
-  h3, .h3 {
-    font-size: 1.21477rem; } }
+h2, .h2 {
+  /* @@debug current ratio 1: 1.331 */
+  /* @@debug current ratio 2: 2.744 */
+  font-size: 1.331rem; }
+  @media screen and (min-width: 480px) {
+    h2, .h2 {
+      font-size: calc( 21.296px + 39.072 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    h2, .h2 {
+      font-size: 2.744rem; } }
 
-@media (min-width: 500px) {
-  h3, .h3 {
-    font-size: 1.52087rem; } }
+h3, .h3 {
+  /* @@debug current ratio 1: 1.21 */
+  /* @@debug current ratio 2: 1.96 */
+  font-size: 1.21rem; }
+  @media screen and (min-width: 480px) {
+    h3, .h3 {
+      font-size: calc( 19.36px + 23.76 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    h3, .h3 {
+      font-size: 1.96rem; } }
 
-@media (min-width: 992px) {
-  h3, .h3 {
-    font-size: 2.35264rem; } }
-
-@media (min-width: 1600px) {
-  h3, .h3 {
-    font-size: 2.80322rem; } }
-
-@media (min-width: 0) {
-  h4, .h4 {
-    font-size: 1.13849rem; } }
-
-@media (min-width: 500px) {
-  h4, .h4 {
-    font-size: 1.3225rem; } }
-
-@media (min-width: 992px) {
-  h4, .h4 {
-    font-size: 1.7689rem; } }
-
-@media (min-width: 1600px) {
-  h4, .h4 {
-    font-size: 1.9881rem; } }
+h4, .h4 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
+  font-size: 1.1rem; }
+  @media screen and (min-width: 480px) {
+    h4, .h4 {
+      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    h4, .h4 {
+      font-size: 1.4rem; } }
 
 h5, .h5 {
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
   font-size: 1rem; }
 
 h6, .h6, label {
+  /* @@debug current ratio 1: 1.07923 */
+  /* @@debug current ratio 2: 1.30889 */
   font-size: 0.8rem; }
 
 small {
+  /* @@debug current ratio 1: 1.0741 */
+  /* @@debug current ratio 2: 1.28705 */
   font-size: 0.75rem; }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: 'Zilla Slab', sans-serif;
   padding: 1rem;
   line-height: 1.4em;
-  background-color: lightslategrey;
-  font-size: 300; }
+  background-color: lightslategrey; }
   body:before {
     content: '⋰';
     position: absolute;
@@ -226,9 +208,12 @@ a {
   color: darkorange; }
 
 h1, h2, h3, h4, h5, h6, .title {
-  font-weight: 600;
-  line-height: 1.1em;
-  margin: 0; }
+  font-weight: 700;
+  line-height: 1em;
+  margin: .5rem 0; }
+
+p {
+  margin: .5rem 0; }
 
 header {
   color: darkorange;
@@ -236,6 +221,8 @@ header {
   line-height: 1rem; }
 
 code {
+  /* @@debug current ratio 1: 1.0741 */
+  /* @@debug current ratio 2: 1.28705 */
   font-size: 0.75rem;
   color: darkorange;
   font-weight: 400;
@@ -253,7 +240,17 @@ code {
   max-width: 40em; }
 
 footer {
-  font-size: 0.75rem;
-  padding: 2rem 0; }
+  /* @@debug current ratio 1: 1.1 */
+  /* @@debug current ratio 2: 1.4 */
+  font-size: 1.1rem;
+  height: 1em;
+  line-height: 1em;
+  margin: 2rem 0; }
+  @media screen and (min-width: 480px) {
+    footer {
+      font-size: calc( 17.6px + 13.2 * ( 100vw - 480px ) / ( 1600 - 480 )); } }
+  @media screen and (min-width: 1600px) {
+    footer {
+      font-size: 1.4rem; } }
 
 /*# sourceMappingURL=demo.css.map */

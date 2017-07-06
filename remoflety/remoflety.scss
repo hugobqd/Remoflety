@@ -6,13 +6,18 @@
 //  • Classes et mixins de font-size :
 //        @ include fs(10) -> .fs-10 -> font-size du h1…
 //
+
+
+// Mixin de debug Custom :
+@mixin debug($i1, $i2: 'out') {
+    @if $debug {
+    /* @@debug #{unquote($i2)}: #{$i1} */
+    }
+};
+
 @import "_functions.scss";
 @import "_variables.scss";
 @import "_mixins.scss";
 @import "_rem.scss";
+@import "_classes.scss";
 @import "_assignment.scss";
-
-// La Fluidité des ratios peux être amélioré :
-// https://www.smashingmagazine.com/2016/05/fluid-typography/#implementing-a-modular-scale
-// https://codepen.io/MadeByMike/pen/VvwqvW?editors=0010
-// Au détriment de la souplesse ?

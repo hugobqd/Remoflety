@@ -1,0 +1,16 @@
+// ----------------------------------------
+//       Création des classes de font-size .fs-10 {}…
+// ----------------------------------------
+
+@each $key, $val in $fs-map {
+    // TODO: tester si clé est une string (ex: 'h1')
+    @if $key < 10 {
+        .#{$fs-class-prefix}0#{$key} {
+            @include fs($key)
+        }
+    } @else {
+        .#{$fs-class-prefix}#{$key} {
+            @include fs($key)
+        }
+    }
+}

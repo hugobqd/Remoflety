@@ -1,12 +1,11 @@
-
 // ----------------------------------------
 //        VARIABLES
 // ----------------------------------------
 
+// Pour debuguer
 $debug: true !default;
 
-
-// Ratios gadgets
+// Les belles intervalles musicales
 $double-octave    : 4                 ;
 $pi               : 3.14159265359     ;
 $major-twelfth    : 3                 ;
@@ -28,33 +27,32 @@ $major-second     : 1.125             ;
 $minor-second     : 1.066666667       ;
 
 
-// Font-size au mobile first (fixe)
-$fs-xs: 14px !default;
+// Gestion du responsive
+//     - Premier breakpoint
+//     - Dernier breakpoint
+//         - break : Breakpoint
+//         - fsize : Font-size de base
+//         - ratio : Ratio pour l'échele modulaire
 
-// Font-sizes responsives min et max
-$fs-min: 16px !default;
-$fs-max: 22px !default;
-
-// Breakpoints du Font-size responsive
-$fs-min-bp: 500px !default;
-$fs-max-bp: 1900px !default;
-
-// Ratios des font-sizes selon breakpoints
-$fs-ratios: (
-    0: 1.067,
-    500px: 1.15,
-    992px: 1.33,
-    1600px: 1.41
-) !default;
+$fs-bigmap: (
+    (
+        break: 480px,
+        fsize: 16px,
+        ratio: 1.1
+    ),
+    (
+        break: 1600px,
+        fsize: 22px,
+        ratio: 1.4
+    )
+);
 
 // Classes de font-sizes et puissance des rations
 $fs-map: (
-    05: 6,
-    10: 5, // H1
-    20: 4, // H2
-    30: 3, // H3
-    40: 2, // H4
-    45: 1, // intermediaire : .fs-45
+    10: 4, // H1
+    20: 3, // H2
+    30: 2, // H3
+    40: 1, // H4
     50: 1rem, // Base, H5, p. 1rem = ratio '0'
     60: .8rem, // H6, pas de ratio en dessou de la base
     70: .75rem
@@ -64,8 +62,21 @@ $fs-map: (
 $fs-class-prefix: 'fs-' !default;
 
 
+
+
+
+// Variables qui me servent de raccourcies, ne pas toucher !
+
+// Font-size au mobile first (fixe)
+$fs-xs: fs-get(1, 'fsize');
+// Font-sizes responsives min et max
+$fs-min: fs-get(1, 'fsize');
+$fs-max: fs-get(2, 'fsize');
+// Breakpoints du Font-size responsive
+$fs-min-bp: fs-get(1, 'break');
+$fs-max-bp: fs-get(2, 'break');
 // Variables sans unités. Ne pas toucher
-$fs-min-no-unit: strip-unit($fs-min);
-$fs-max-no-unit: strip-unit($fs-max);
-$fs-min-bp-no-unit: strip-unit($fs-min-bp);
-$fs-max-bp-no-unit: strip-unit($fs-max-bp);
+$fs-min-no-unit:    fs-get(1, 'fsize', s);
+$fs-max-no-unit:    fs-get(2, 'fsize', s);
+$fs-min-bp-no-unit: fs-get(1, 'break', s);
+$fs-max-bp-no-unit: fs-get(2, 'break', s);

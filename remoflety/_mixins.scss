@@ -5,21 +5,34 @@
 // Mixin de font-size
 // Usage .toto { @include fs(10); } // = font-size du H1
 @mixin fs($key) {
+
+    $cur-r1: pow(strip-unit(fs-get(1, 'ratio')),strip-unit(map-get($fs-map, $key)));
+    $cur-r2: pow(strip-unit(fs-get(2, 'ratio')),strip-unit(map-get($fs-map, $key)));
+    @include debug($cur-r1, 'current ratio 1');
+    @include debug($cur-r2, 'current ratio 2');
+
     @if unit( map-get($fs-map, $key) ) == '' {
         // C'est un ratio (entier, sans unité)
-        // --- Ratio fixes changeant au breakpoint ---
-        @each $bp, $ratio in $fs-ratios {
-            @media (min-width: $bp) {
-                font-size: pow($ratio, map-get($fs-map, $key)) * 1rem;
-            }
+
+        // // --- Ratio Flexibles ---
+        font-size: 1rem * $cur-r1;
+
+        @media screen and (min-width: $fs-min-bp ){
+            font-size: calc( #{$fs-min * $cur-r1} + #{$fs-max-no-unit * $cur-r2 - $fs-min-no-unit * $cur-r1} * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
         }
+        @media screen and (min-width: $fs-max-bp){
+            font-size: $cur-r2 * 1rem;
+        }
+
     } @else {
         font-size: map-get($fs-map, $key);
     }
 }
 
+
 // Création des classes de font-size .fs-10 {}…
 @each $key, $val in $fs-map {
+    // TODO: tester si clé est une string (ex: 'h1')
     @if $key < 10 {
         .#{$fs-class-prefix}0#{$key} {
             @include fs($key)
@@ -27,17 +40,6 @@
     } @else {
         .#{$fs-class-prefix}#{$key} {
             @include fs($key)
-        }
-    }
-}
-
-// Mixin d'affichage des ratio si $debug;
-@if $debug {
-    .debug:before {
-        @each $bp, $ratio in $fs-ratios {
-            @media (min-width: $bp) {
-                content: 'bp: #{$bp} | ratio: #{$ratio}';
-            }
         }
     }
 }

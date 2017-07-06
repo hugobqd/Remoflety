@@ -1,4 +1,17 @@
 //    ----------------------------------------
+//    EXPLOITER LE TABLEAU $fs-bigmap
+//    ----------------------------------------
+@function fs-get($i, $key, $strip: false) {
+    @if $strip {
+        @return strip-unit( map-get( nth($fs-bigmap, $i), $key) );
+    } @else {
+        @return map-get( nth($fs-bigmap, $i), $key);
+    }
+};
+
+
+
+//    ----------------------------------------
 //    SUPPRIMER LES UNITÉS
 //    https://css-tricks.com/snippets/sass/strip-unit-function/
 //        $length: 42px;
@@ -15,6 +28,7 @@
 
   @return $number;
 }
+
 
 
 //    ----------------------------------------

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,400i,700" rel="stylesheet">
     <link rel="stylesheet" href="css/demo.css">
 
 </head>
@@ -26,8 +27,6 @@
 
         <h4>Lorem ipsum dolor sit amet <code>h4</code></h4>
 
-        <div class="fs-45 title">Lorem ipsum dolor sit amet <code>.fs-45</code></div>
-
         <h5>Lorem ipsum dolor sit amet <code>h5</code></h5>
 
         <div class="max-width">
@@ -40,7 +39,7 @@
         </div>
 
         <footer>
-            <a href="https://github.com/hugobqd/Remoflety">Remoflety@github</a>
+            <a href="https://github.com/hugobqd/Remoflety">@github</a>
         </footer>
 
     </div><!-- /#page -->
@@ -54,8 +53,10 @@
         // Display 1rem in px (by calcultaing the height of this 1rem heigth element)
         function getFontSize() {
             var debug = $('.debug')
+            var rempx = debug.height();
+            var ratio = $('footer').height() / rempx ;
             console.log( "getFontSize!" );
-            debug.html(' | 1rem: '+debug.height()+'px');
+            debug.html('1rem: '+rempx+'px | ratio : '+ Math.round(ratio*1000)/1000 +'');
         }
         getFontSize();
         $(window).resize(function(){

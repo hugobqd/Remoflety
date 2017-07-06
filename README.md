@@ -14,23 +14,37 @@
 
 ## Configurer
 
-### Variables du font-size global
-La typographie est réglé en *rem*, le font-size du HTML sert donc de base. Il évolue selon des breakpoint et un calcul incluant la largeur de l'écran (*vw*)
-- Font-size fixe de base initial (mobile-first) : `$fs-xs`
-- Font-size responsive minimum : `$fs-min`
-- Font-size responsive maximum : `$fs-max`
-- Breakpoint correspondant au font-size responsive minimum : `$fs-min-bp`
-- Breakpoint correspondant au font-size responsive maximum : `$fs-max-bp`
+![Alt text](https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png "Optional title")
 
-### Variable des ratios d'échelle modulaires
-Un ratio permet de définir une harmonie de taille entre les différentes tailles typographiques (comme les titres).
-Au départ les niveaux ont peu de différences de taille les uns par rapport aux autres grâce à un petit ratio. Des ratios plus grand correspondant à des breakpoints sont donc définis:
 
+
+### ~~Variables du font-size global~~
+~~La typographie est réglé en *rem*, le font-size attribué à `<html>` sert donc de base. Il évolue selon des breakpoint et un calcul incluant la largeur de l'écran (*vw*)~~
+- ~~Font-size fixe de base initial (mobile-first) : `$fs-xs`~~
+- ~~Font-size responsive minimum : `$fs-min`~~
+- ~~Font-size responsive maximum : `$fs-max`~~
+- ~~Breakpoint correspondant au font-size responsive minimum : `$fs-min-bp`~~
+- ~~Breakpoint correspondant au font-size responsive maximum : `$fs-max-bp`~~
+
+### ~~Variable des ratios d'échelle modulaires~~
+~~Un ratio permet de définir une harmonie de taille entre les différentes tailles typographiques (comme les titres).
+Au départ les niveaux ont peu de différences de taille les uns par rapport aux autres grâce à un petit ratio. Des ratios plus grand correspondant à des breakpoints sont donc définis:~~
+
+
+### Tableau de Font-size global responsive :
+Nouveau tableau unique pour configurer les variables global responsives.
 ```css
-$fs-ratios: (
-  0: 1.067,
-  500px: 1.15,
-  992px: 1.33
+$fs-bigmap: (
+    (
+        break: 320px,
+        fsize: 15px,
+        ratio: 1.067
+    ),
+    (
+        break: 1800px,
+        fsize: 20px,
+        ratio: 1.5
+    )
 );
 ```
 
@@ -106,17 +120,17 @@ small { @include fs(70);}
 ## TODO
 
 - Préfixer les variables et mixin pour éviter les conflits ?
-- Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.
-- Si cela fonctionne, les variables du REM et des ratios pourront être uniformisées dans un tableau unique :  
+- ~~Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.~~ *FAIT*
+- ~~Si cela fonctionne, les variables du REM et des ratios pourront être uniformisées dans un tableau unique~~ *FAIT*
+- Possibilité de plus de lignes au tableau de variable responsive ? (pour ajuster des paliers intermédiaires de font-size et de ratio) ?
+- Est-ce que ce tableau est plus lisible que l'autre ? :
 
 ```css
 $fs-bp-ratio: (
-  0:      ( 14px, 1.06),
-  480px:  ( 14px, 1.06),
-  768px:  ( 16px, 1.25),
-  1900px: ( 22px, 1.41)
+  480px:  ( fs: 14px, ratio: 1.06),
+  1900px: ( fs: 22px, ratio: 1.41)
 );
 ```
 
 ## Bugs
-- Sur la demo: .fs-45 vari trop autour de 824px de VW. Ressemble à une modification du letter-spacing.
+- Sur la demo de la v0.1: .fs-45 vari trop autour de 824px de VW. Ressemble à une modification du letter-spacing. je pense que c'est dû à la typo san-franscico (mac-os) qui a des réglages différents celon le font-size.
