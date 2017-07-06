@@ -122,7 +122,10 @@ small { @include fs(70);}
 - Préfixer les noms de variables et mixin pour éviter les conflits ?
 - ~~Améliorer l'application des ratios avec calc(…) pour que ce soit progressif plutôt que par paliers.~~ *FAIT*
 - ~~Si cela fonctionne, les variables du REM et des ratios pourront être uniformisées dans un tableau unique~~ *FAIT*
-- Possibilité de plus de lignes au tableau de variable responsive (pour ajuster des paliers intermédiaires de font-size et de ratio)
+- Tester si on définie les clés en texte (`.fs-label`).
+- Tester si on définie les BP en em ou autres.
+- Ajouts de paliers intermédiaires de font-size et de ratio ? : `bp: (320px, 768px, 1200px), fs: (14px, 15px, 22px),`.
+- Possibilié de mettre plusieurs ratio (ou unités) pour être plus souple :
 ```css
 $fs-map: (
   10: (4, 3),
@@ -131,7 +134,6 @@ $fs-map: (
   30: (2rem, 2.5rem),
 );
 ```
-- Tester si on définie les clés en texte (`.fs-label`).
 - Fusionner les deux tableaux pour plus de simplicité et pouvoir faire plusieurs groupes ? :
 
 ```css
