@@ -22,9 +22,9 @@
             <nav class="">
                 Classes :
                 <span>
-                    <a id="select-init" href="#">&times; Réinitialiser</a>
-                    <a id="select-rand" href="#">⚄ Random</a>
-                    <a id="select-unif" href="#">= Uniformiser</a>
+                    <a id="select-init" href="#"><span class="fs-45">&times;</span> Réinitialiser</a>
+                    <a id="select-rand" href="#"><span class="fs-45">⚄</span> Random</a>
+                    <a id="select-unif" href="#"><span class="fs-45">=</span> Uniformiser</a>
                 </span>
             </nav>
         </div>
@@ -173,7 +173,7 @@
             });
         });
         $('#select-rand').on('click', function(){
-            $('[data-select]').each(function(){
+            $('[data-select]:not(header)').each(function(){
                 var rand =  Math.floor((Math.random() * 8) + 1 ) * 10;
                 if (rand == 80 ) { rand = 45; }
                 // if (rand == 90 ) { rand = '05'; } pas de gigantesque en random

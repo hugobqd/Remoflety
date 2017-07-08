@@ -55,15 +55,9 @@
       font-size: 1.5rem; } }
 
 .fs-45 {
-  /* @@debug current ratio 1: 1.02874 */
-  /* @@debug current ratio 2: 1.10668 */
-  font-size: 1.02874rem; }
-  @media screen and (min-width: 480px) {
-    .fs-45 {
-      font-size: calc( 15.43106px + 11.1293 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
-  @media screen and (min-width: 1800px) {
-    .fs-45 {
-      font-size: 1.10668rem; } }
+  /* @@debug current ratio 1: 1.14568 */
+  /* @@debug current ratio 2: 1.62671 */
+  font-size: 1.2rem; }
 
 .fs-50 {
   /* @@debug current ratio 1: 1 */
@@ -84,7 +78,7 @@
 .fs-70 {
   /* @@debug current ratio 1: 1.07889 */
   /* @@debug current ratio 2: 1.31214 */
-  font-size: 0.67rem; }
+  font-size: 0.67em; }
 
 html {
   font-size: 15px; }
@@ -153,15 +147,9 @@ html {
       font-size: 1.5rem; } }
 
 .fs-45 {
-  /* @@debug current ratio 1: 1.02874 */
-  /* @@debug current ratio 2: 1.10668 */
-  font-size: 1.02874rem; }
-  @media screen and (min-width: 480px) {
-    .fs-45 {
-      font-size: calc( 15.43106px + 11.1293 * ( 100vw - 480px ) / ( 1800 - 480 )); } }
-  @media screen and (min-width: 1800px) {
-    .fs-45 {
-      font-size: 1.10668rem; } }
+  /* @@debug current ratio 1: 1.14568 */
+  /* @@debug current ratio 2: 1.62671 */
+  font-size: 1.2rem; }
 
 .fs-50 {
   /* @@debug current ratio 1: 1 */
@@ -182,7 +170,7 @@ html {
 .fs-70 {
   /* @@debug current ratio 1: 1.07889 */
   /* @@debug current ratio 2: 1.31214 */
-  font-size: 0.67rem; }
+  font-size: 0.67em; }
 
 h1, .h1 {
   /* @@debug current ratio 1: 1.57352 */
@@ -247,12 +235,17 @@ h6, .h6, label {
 small {
   /* @@debug current ratio 1: 1.07889 */
   /* @@debug current ratio 2: 1.31214 */
-  font-size: 0.67rem; }
+  font-size: 0.67em; }
 
-/* apply a natural box layout model to all elements, but allowing components to change */
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale; }
 
 *, *:before, *:after {
   -webkit-box-sizing: inherit;
@@ -274,10 +267,12 @@ body {
     line-height: 1rem;
     text-align: center;
     background: darkturquoise;
-    color: aliceblue; }
+    color: aliceblue;
+    z-index: 1; }
 
 a {
-  color: dodgerblue; }
+  color: dodgerblue;
+  text-decoration: none; }
 
 a:hover {
   color: mediumblue; }
@@ -298,7 +293,7 @@ header {
 code {
   /* @@debug current ratio 1: 1.07889 */
   /* @@debug current ratio 2: 1.31214 */
-  font-size: 0.67rem;
+  font-size: 0.67em;
   color: dodgerblue;
   font-weight: 400;
   font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; }
@@ -318,10 +313,10 @@ code {
   flex-wrap: wrap;
   line-height: 1rem;
   color: dodgerblue; }
-  .toolbar span {
+  .toolbar > span {
     display: inline-block; }
   .toolbar a {
-    margin: 0 .25em;
+    margin: 0 .33em;
     display: inline-block; }
 
 .debug {
@@ -333,7 +328,8 @@ code {
   display: inline-block;
   margin-bottom: 1rem;
   margin-right: 1rem;
-  border-radius: 2px; }
+  border-radius: 2px;
+  font-weight: 600; }
 
 .max-width {
   max-width: 40em;

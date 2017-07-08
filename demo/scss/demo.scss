@@ -28,10 +28,10 @@ $fs-map: (
     20: 3, // H2
     30: 2, // H3
     40: 1, // H4
-    45: .25, // intermediaire, juste un peu plus grand que 50
+    45: 1.2rem, // intermediaire, juste un peu plus grand que 50
     50: 0, // Base, H5, p. 1rem = ratio '0'
     60: .85rem, // H6, pas de ratio en dessou de la base
-    70: .67rem
+    70: .67em
 );
 
 // Magic :
@@ -41,9 +41,14 @@ $fs-map: (
 // Styles
 // -----------------------------
 
-/* apply a natural box layout model to all elements, but allowing components to change */
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
 }
 *, *:before, *:after {
   box-sizing: inherit;
@@ -66,10 +71,12 @@ body {
         text-align: center;
         background: darkturquoise;
         color: aliceblue;
+        z-index: 1;
     }
 }
 a {
     color: dodgerblue;
+    text-decoration: none;
 }
 a:hover {
     color: mediumblue
@@ -101,11 +108,11 @@ code {
     flex-wrap: wrap;
     line-height: 1rem;
     color: dodgerblue;
-    span {
+    > span {
         display: inline-block;
     }
     a {
-        margin: 0 .25em;
+        margin: 0 .33em;
         display: inline-block;
     }
 }
@@ -119,7 +126,7 @@ code {
     margin-bottom: 1rem;
     margin-right: 1rem;
     border-radius: 2px;
-
+    font-weight: 600;
 }
 .max-width {
     max-width: 40em;
