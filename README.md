@@ -11,8 +11,9 @@ Remoflety est un plugin Sass permettant de gérer l'agrandissement des textes re
 - Le choix des unités est souple (rem, px…)
 
 <a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">
-![](https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png "Optional title")
-<small><em>smashingmagazine.com/2016/05/fluid-typography/</em></small></a>
+<img src="https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png">
+<sup>smashingmagazine.com/2016/05/fluid-typography/</sup>
+</a>
 
 ## 1. Incorporer
 
