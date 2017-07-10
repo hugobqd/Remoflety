@@ -235,7 +235,6 @@ $remoflety: (
 ```
 
 ```css
-/* remoflety/_assignment.scss */
 
 h1, .h1 { @include fs("10");}
 h2, .h2 { @include fs("20");}
@@ -268,8 +267,6 @@ $remoflety: (
     …
 );
 ```
-
-Il est aussi préférable d'initialiser sa feuille de style :
 
 ```css
 
