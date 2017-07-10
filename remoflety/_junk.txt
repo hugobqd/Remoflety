@@ -1,0 +1,31 @@
+// TRIPATOUILLER TABLEAU:
+// Obtenir Longeur de map :
+@include debug( length($fs-bigmap), 'Longueur' );
+// Obtenir une clé X :
+@include debug( nth($fs-bigmap, 1), '1re clé' );
+// Obtenir la dernière clé :
+@include debug( nth($fs-bigmap, length($fs-bigmap)), 'Dernière clé' );
+// Boucler sur deux niveaux :
+@each $key in $fs-bigmap {
+    @each $key2 in $key {
+        @include debug($key2, 'Niveau 2');
+    }
+};
+
+// Boucle @for, pour avoir index
+@for $i from 1 through length($fs-bigmap) {
+    $current-key: nth($fs-bigmap, $i);
+    @include debug($current-key, '> clé #{$i}' );
+    @for $j from 1 through length($current-key) {
+        @include debug(nth($current-key, $j), '> > clé #{$j}' );
+    }
+};
+
+// EXPLOITER TABLEAU DIRECTEMENT
+@function fs-get($i, $key, $strip: false) {
+    @if $strip {
+        @return strip-unit( map-get( nth($fs-bigmap, $i), $key) );
+    } @else {
+        @return map-get( nth($fs-bigmap, $i), $key);
+    }
+};

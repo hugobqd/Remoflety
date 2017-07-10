@@ -1,0 +1,73 @@
+// ----------------------------------------
+//       Vérifier intégrité du tableau
+// ----------------------------------------
+@if $debug {
+    @each $key, $val in $remo0 {
+        // TODO: tester si clé est une string (ex: 'h1')
+        $current-unit: "";
+
+        // CHECK: One value, or one value for each breakpoint
+        @if $key != "bp"  and  $key != "prefix" {
+            @if length(remo-get($key)) == 1 or length(remo-get($key)) == length(remo-get("bp")) {
+                // OK… I guess
+            } @else {
+                @error "\"#{$key}\" have #{length(remo-get($key))} values, it must have 1 or the same number of values as \"bp\" (#{length(remo-get("bp"))})";
+            }
+        }
+        @for $i from 1 through length(remo-get($key)) {
+            @if  $key != "prefix" {
+                // CHECK: Numbers ?
+                @if type-of(remo-get($key, $i)) != "number" {
+                    @error "\"#{remo-get($key, $i)}\" in \"#{$key}\" is not a number";
+                }
+                // CHECK: Ratio ? (si un ratio est utilisé, la clé "ratio" doit être définie)
+                @if unit(remo-get($key, $i)) == ""  and  remo-get("ratio") == null {
+                    @error 'The ratio "#{remo-get($key, $i)}" i used in "#{$key}", you must define the "ratio" map. Ex: "ratio": (1.07, 1.45),…';
+                }
+                // CHECK: Mixed units ?
+                @if $current-unit == "" or unit(remo-get($key, $i)) == ""  or  unit(remo-get($key, $i)) == $current-unit {
+                    $current-unit: unit(remo-get($key, $i));
+                } @else {
+                    @error "\"#{$key}\" has mixed units (#{unit(remo-get($key, $i))} + #{$current-unit}). Use ratio or same unit";
+                }
+            }
+            @include debug($current-unit, "#{$key}/u");
+        }
+    }
+}
+
+
+
+
+// ----------------------------------------
+//       Définir le font-size de <html>
+// ----------------------------------------
+
+// Sortir les HTML
+// Si key "html" existe :
+@if remo-get("html") {
+    html {
+        @include remo-media(remo-get("html"), remo-get("bp"));
+    }
+}
+
+// ----------------------------------------
+//       Création des classes de font-size .fs-10 {}…
+// ----------------------------------------
+
+/* Création automatique des classes de font-size */
+@each $key, $val in $remo0 {
+    // TODO: tester si clé est une string (ex: 'h1')
+    $class-prefix: "";
+    @if remo-get("prefix") == null {
+        $class-prefix: "fs-";
+    } @else {
+        $class-prefix: remo-get("prefix");
+    }
+    @if  $key != "bp"  and  $key != "html"  and  $key != "ratio"  and  $key != "prefix" {
+        @include debug($key, '$key');
+        .#{$class-prefix}#{unquote($key)} {
+            @include fs($key);
+        }
+    }
+}

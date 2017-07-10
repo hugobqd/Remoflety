@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+// Permet de tester les valeurs en amont et d'afficher des messages d'erreurs personnalisés
+$debug : true;
+
+
+// Variables Remoflety :
+$remo0: (
+    "bp":    (480px, 1600px),
+    "ratio": (1.15, 1.45),
+    "html":  (14px, 20px),
+    //
+    "05":    (60px, 120px),
+    "10":    (48px, 90px),
+    "20":    (36px, 72px),
+    "30":    (24px, 48px),
+    "40":    3,
+    "50":    (16px, 24px),
+    "60":    (14px, 20px),
+    "70":    (12px, 16px),
+    //
+    // "prefix": 'fs-',
+);
+
+// Magic! :
+@import "../../remoflety/remoflety";
+
+// Declarations :
+h1, .h1 {
+    @include fs("10");
+}
+h2, .h2 {
+    @include fs("20");
+}
+h3, .h3 {
+    @include fs("30");
+}
+h4, .h4 {
+    @include fs("40");
+}
+h5, .h5 {
+    @include fs("50");
+}
+h6, .h6, label {
+    @include fs("60");
+}
+small, code {
+    @include fs("70");
+}
+footer {
+    @include fs("40");
+}
+
+
+// Demo's styles :
+@import "demo";

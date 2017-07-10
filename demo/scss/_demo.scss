@@ -1,46 +1,3 @@
-@charset "UTF-8";
-
-// Variables Remoflety :
-
-// Gestion du responsive
-//     - Premier breakpoint
-//     - Dernier breakpoint
-//         - break : Breakpoint
-//         - fsize : Font-size de base
-//         - ratio : Ratio pour l'échele modulaire
-$fs-bigmap: (
-    (
-        break: 480px,
-        fsize: 15px,
-        ratio: 1.12
-    ),
-    (
-        break: 1800px,
-        fsize: 24px,
-        ratio: 1.5
-    )
-);
-
-// Classes de font-sizes et puissance des rations
-$fs-map: (
-    05: 6, // juste gigantesque
-    10: 4, // H1
-    20: 3, // H2
-    30: 2, // H3
-    40: 1, // H4
-    45: 1.2rem, // intermediaire, juste un peu plus grand que 50
-    50: 0, // Base, H5, p. 1rem = ratio '0'
-    60: .85rem, // H6, pas de ratio en dessou de la base
-    70: .67em
-);
-
-// Magic :
-@import "../../remoflety/remoflety.scss";
-
-
-// Styles
-// -----------------------------
-
 html {
     box-sizing: border-box;
     /* Support for all WebKit browsers. */
@@ -96,7 +53,6 @@ header {
 }
 code {
     // MIXIN :
-    @include fs(70);
     color: dodgerblue;
     font-weight: 400;
     font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
@@ -134,7 +90,6 @@ code {
 }
 footer {
     // MIXIN :
-    @include fs(40);
     height: 1em;
     line-height: 1em;
     margin: 2rem 0;

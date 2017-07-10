@@ -17,6 +17,7 @@
 ## Configurer
 
 ![Alt text](https://www.smashingmagazine.com/wp-content/uploads/2016/05/advanced-calc-800-opt.png "Optional title")
+<small><a href="https://www.smashingmagazine.com/2016/05/fluid-typography/">smashingmagazine.com/2016/05/fluid-typography/</a></small>
 
 
 

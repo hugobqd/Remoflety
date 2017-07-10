@@ -1,0 +1,213 @@
+
+
+// Quoter les key : https://github.com/acdlite/json-sass/issues/2
+
+// HTML : le rentre obligatoire ?
+// BP : le rentre obligatoire ?
+
+// Plugins : Fichier optionel pour integration bootstrap,
+// permet d'écrire les bp bootstrap:     "bp":    ("sm", "lg"),
+// + fichier de variable par défaut avec display et heading ?? ("D1", "D2", "h1", etc)
+
+
+
+
+// Vérifier intégrité des valeurs
+// Compter les bp
+// Sortir html {font-size} :
+// 1. 1er font-size
+// 2 boucler sur chaque «intervale»
+// 3. Dernier font-size
+// Chaque palier :
+// Calculer les valeurs, convertir si ratio
+// Sortir les {font-size} comme ci-dessus (même mixin ?)
+// HTML calc( 15px + 9 * ( 100vw - 480px ) / ( 1800 - 480 ))
+// H1   calc( 23.60279px + 97.89721 * ( 100vw - 480px ) / ( 1800 - 480 ))
+
+
+
+
+
+
+//
+
+
+
+
+
+
+
+
+h1, .fs-10 {
+    @include fs("10");
+}
+h2, .fs-20 {
+    @include fs("20");
+}
+h3, .fs-30 {
+    @include fs("30");
+}
+h4, .fs-40 {
+    @include fs("40");
+}
+h5, .fs-50 {
+    @include fs("50");
+}
+h6, .fs-60 {
+    @include fs("60");
+}
+h6, .fs-60 {
+    @include fs("60");
+}
+
+
+
+
+
+/*
+
+-----------------------------------
+Breakpoints
+
+╔══════╤═════╤══════╗
+║ foo  │ bar │ baz  ║
+╟──────┼─────┼──────╢
+║ frob │ bar │ quuz ║
+╚══════╧═════╧══════╝
+┌──────┬─────────┐
+│      │Header   │
+│      │1        │
+├──────┼─────────┤
+│Header│Testing  │
+│2     │something│
+│      │cool     │
+└──────┴─────────┘
+
+┌─────────────┬───────────┬───────────┬───────────┐
+│ Breakpoints │   320px   │   768px   │  1420px   │
+├─────────────┼───────────┼───────────┼───────────┤
+│ Ratio       │   1.067   │   1.231   │  1.614…   │
+├─────────────┼───────────┼───────────┼───────────┤
+│ HTML        │    14px   │    16px   │    22px   │
+├─────────────┼───────────┼───────────┼───────────┤
+│ .fs-10      │   1.61    │   768px   │  1420px   │
+├─────────────┼───────────┼───────────┼───────────┤
+│ Breakpoints │   320px   │   768px   │  1420px   │
+└─────────────┴───────────┴───────────┴───────────┘
+
+*/
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++
+//         CAS FONCIONNELS
+// +++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Juste le font size du html va etre adaptatif,
+// les FS devront être écrites à la main (en rem ou px)
+// Responsive mais sans adaptations du ratio
+// Si pas de HTML : inutile
+// Si pas de BP : inutile
+$remo1: (
+    "html": (12px, 16px),
+    "bp": (320px, 1200px),
+);
+
+// Idem: Juste le font size du html va etre adaptatif,
+// Des classes non adaptatives vons être rendus
+// Si pas de HTML : inutile
+// Si pas de BP : inutile
+$remo2: (
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "10": (3rem),
+    "20": (2rem),
+    "30": (1rem),
+    // …
+);
+
+// L'ensemble va s'adapter mais les échelons de titrages sont manuels (laborieux et incohérences)
+// Si pas de HTML : root ne varie pas, mais les éléments définis sont bien responsive. Possibilité d'attribuer une classe au html
+$remo3: (
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "10": (2rem, 3rem),
+    "20": (1.5rem, 2rem),
+    "30": (1rem, 1rem),
+    // …
+);
+
+// Création des niveaux au ratio, nécéssite HTML
+// Si pas de HTML : Inutile
+$remo4: (
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "ratio": (1.1, 1.4),
+    "10": (3),
+    "20": (2),
+    "30": (1),
+    // …
+);
+
+
+// valeurs mixées
+$remo5: (
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "ratio": (1.1, 1.4),
+    "10": (3.3, 3), // correction de ratio ici ne pas en abuser, si trop de correction autant fixer en rem ou px
+    "20": 2,
+    "30": (24px, 36px),
+    "40": (2rem, 3rem),
+    // …
+);
+
+
+$remo5: (
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "ratio": (1.1, 1.4),
+    "10": (5),
+    // …
+),(
+    "name": 'sidebar',
+    "html": (14px, 18px),
+    "bp": (320px, 1200px),
+    "ratio": (1.1, 1.4),
+    "10": (5),
+    // …
+);
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++
+//         CAS NON FONCIONNELS OU INUTILES
+// +++++++++++++++++++++++++++++++++++++++++++++
+
+
+// Création des niveaux au ratio, nécéssite HTML
+// Si pas de HTML : Pas d'interet si c'est pour avoir juste du modular scale sans adaptatif : sauf si les gens sont habitué à cette librairie et veulent killer l'ensemble.
+$remo10: (
+    "ratio":  1.1,
+    "10":     3,
+    "20":     2,
+    "30":     1,
+    // …
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//

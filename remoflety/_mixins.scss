@@ -2,44 +2,71 @@
 //       MIXINS
 // ----------------------------------------
 
-// Mixin de font-size
-// Usage .toto { @include fs(10); } // = font-size du H1
-@mixin fs($key) {
-
-    $cur-r1: pow(strip-unit(fs-get(1, 'ratio')),strip-unit(map-get($fs-map, $key)));
-    $cur-r2: pow(strip-unit(fs-get(2, 'ratio')),strip-unit(map-get($fs-map, $key)));
-    @include debug($cur-r1, 'current ratio 1');
-    @include debug($cur-r2, 'current ratio 2');
-
-    @if unit( map-get($fs-map, $key) ) == '' {
-        // C'est un ratio (entier, sans unité)
-
-        // // --- Ratio Flexibles ---
-        font-size: 1rem * $cur-r1;
-
-        @media screen and (min-width: $fs-min-bp ){
-            font-size: calc( #{$fs-min * $cur-r1} + #{$fs-max-no-unit * $cur-r2 - $fs-min-no-unit * $cur-r1} * ( 100vw - #{$fs-min-bp} ) / ( #{$fs-max-bp-no-unit} - #{$fs-min-bp-no-unit} ));
-        }
-        @media screen and (min-width: $fs-max-bp){
-            font-size: $cur-r2 * 1rem;
-        }
-
-    } @else {
-        font-size: map-get($fs-map, $key);
+// Mixin de formule magique
+@mixin remo-formula($fs-min, $fs-max, $bp-min, $bp-max, $prop: font-size) {
+    @if $debug {
+        /* remo-formula : #{$fs-min}, #{$fs-max}, #{$bp-min}, #{$bp-max} */
+    }
+    @each $property in $prop {
+        #{$property}: calc( #{$fs-min} + #{strip-unit($fs-max - $fs-min)} * (100vw - #{$bp-min}) / #{strip-unit($bp-max - $bp-min)} );
     }
 }
 
-
-// Création des classes de font-size .fs-10 {}…
-@each $key, $val in $fs-map {
-    // TODO: tester si clé est une string (ex: 'h1')
-    @if $key < 10 {
-        .#{$fs-class-prefix}0#{$key} {
-            @include fs($key)
-        }
-    } @else {
-        .#{$fs-class-prefix}#{$key} {
-            @include fs($key)
+// Mixin Appliquer les formules en mediaqueries
+@mixin remo-media($fs-map, $bp-map: null) {
+    font-size: nth($fs-map, 1);
+    @if length($bp-map) > 1 {
+        @for $i from 1 through length($bp-map) {
+            @if $i != length($bp-map) and  unit(nth($fs-map, $i)) != 'em' and  unit(nth($fs-map, $i)) != '%' {
+                @media screen and (min-width: nth($bp-map, $i)) {
+                    @include remo-formula(
+                        nth($fs-map, $i),
+                        nth($fs-map, $i+1),
+                        nth($bp-map, $i),
+                        nth($bp-map, $i+1)
+                    );
+                }
+            } @else {
+                @media screen and (min-width: nth($bp-map, $i)) {
+                    font-size: nth($fs-map, $i),;
+                }
+            }
         }
     }
+}
+
+// mixin de création de font-size
+
+@mixin fs($key) {
+    $current-unit: "";
+    $fs-list: ();
+
+    // CHECK: Clé existe ?
+    @if remo-get($key) == null  and  $debug{
+        @error "There is no key '#{$key}' in $remo0";
+    }
+
+    // si il n'ya qu'une valeur pas ratio :
+    // remo-media sans mediaqueries
+    // Sinon autant de valeur que de BP
+    @if  length(remo-get($key)) == 1  and  unit(remo-get($key, 1)) != "" {
+        @include remo-media(remo-get($key, 1))
+    } @else {
+        // Ratio ou plusieur valeurs
+        $fs-new: ();
+        @for $i from 1 through length(remo-get("bp")) {
+            @if unit(remo-get($key, $i)) == "" {
+                // C'est un ratio
+                // Convertir ratio avec meme unité que "html"
+                $fs-new: pow(remo-get("ratio", $i), remo-get($key, $i)) * remo-get("html", $i);
+            } @elseif unit(remo-get($key, $i)) == "rem" {
+                $fs-new: strip-unit(remo-get($key, $i))* remo-get('html', $i) ;
+            } @else {
+                $fs-new: remo-get($key, $i);
+            }
+            $fs-list: append($fs-list, $fs-new);
+        }
+        @include remo-media($fs-list, remo-get("bp"))
+    }
+
 }
