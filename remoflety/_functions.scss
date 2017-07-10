@@ -6,7 +6,7 @@
 //    remo-get("bp", 1)      -> 320px
 //    length(remo-get("bp")) -> 3
 //    remo-get("nimportequoi") -> false
-@function remo-get($key, $i: false, $map: $remo0) {
+@function remo-get($key, $i: false, $map: $remoflety) {
     $level2: map-get($map, $key);
     @if $i and length(map-get($map, $key)) > 1 {
         @return nth($level2, $i);

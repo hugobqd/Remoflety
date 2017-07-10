@@ -1,207 +1,148 @@
 @charset "UTF-8";
-/*
-Responsive font-size sass tool-kit
-*/
-/* @@debug bp/u: px */
-/* @@debug bp/u: px */
-/* @@debug ratio/u:  */
-/* @@debug ratio/u:  */
-/* @@debug html/u: px */
-/* @@debug html/u: px */
-/* @@debug 05/u: px */
-/* @@debug 05/u: px */
-/* @@debug 10/u: px */
-/* @@debug 10/u: px */
-/* @@debug 20/u: px */
-/* @@debug 20/u: px */
-/* @@debug 30/u: px */
-/* @@debug 30/u: px */
-/* @@debug 40/u:  */
-/* @@debug 50/u: px */
-/* @@debug 50/u: px */
-/* @@debug 60/u: px */
-/* @@debug 60/u: px */
-/* @@debug 70/u: px */
-/* @@debug 70/u: px */
 html {
   font-size: 14px; }
   @media screen and (min-width: 480px) {
     html {
-      /* remo-formula : 14px, 20px, 480px, 1600px */
-      font-size: calc( 14px + 6 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 14px + 6 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     html {
       font-size: 20px; } }
 
-/* Création automatique des classes de font-size */
-/* @@debug $key: 05 */
+/*
+*    Création automatique des classes de font-size
+*/
 .fs-05 {
-  font-size: 60px; }
+  font-size: 80px; }
   @media screen and (min-width: 480px) {
     .fs-05 {
-      /* remo-formula : 60px, 120px, 480px, 1600px */
-      font-size: calc( 60px + 60 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 80px + 120 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     .fs-05 {
-      font-size: 120px; } }
+      font-size: 200px; } }
 
-/* @@debug $key: 10 */
 .fs-10 {
-  font-size: 48px; }
+  font-size: 24.48609px; }
   @media screen and (min-width: 480px) {
     .fs-10 {
-      /* remo-formula : 48px, 90px, 480px, 1600px */
-      font-size: calc( 48px + 42 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 24.48609px + 76.76391 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     .fs-10 {
-      font-size: 90px; } }
+      font-size: 101.25px; } }
 
-/* @@debug $key: 20 */
 .fs-20 {
-  font-size: 36px; }
-  @media screen and (min-width: 480px) {
-    .fs-20 {
-      /* remo-formula : 36px, 72px, 480px, 1600px */
-      font-size: calc( 36px + 36 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    .fs-20 {
-      font-size: 72px; } }
-
-/* @@debug $key: 30 */
-.fs-30 {
-  font-size: 24px; }
-  @media screen and (min-width: 480px) {
-    .fs-30 {
-      /* remo-formula : 24px, 48px, 480px, 1600px */
-      font-size: calc( 24px + 24 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    .fs-30 {
-      font-size: 48px; } }
-
-/* @@debug $key: 40 */
-.fs-40 {
   font-size: 21.29225px; }
   @media screen and (min-width: 480px) {
-    .fs-40 {
-      /* remo-formula : 21.29225px, 60.9725px, 480px, 1600px */
-      font-size: calc( 21.29225px + 39.68025 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    .fs-40 {
-      font-size: 60.9725px; } }
+    .fs-20 {
+      font-size: calc( 21.29225px + 46.20775 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
+    .fs-20 {
+      font-size: 67.5px; } }
 
-/* @@debug $key: 50 */
+.fs-30 {
+  font-size: 18.515px; }
+  @media screen and (min-width: 480px) {
+    .fs-30 {
+      font-size: calc( 18.515px + 26.485 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
+    .fs-30 {
+      font-size: 45px; } }
+
+.fs-40 {
+  font-size: 16.1px; }
+  @media screen and (min-width: 480px) {
+    .fs-40 {
+      font-size: calc( 16.1px + 13.9 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
+    .fs-40 {
+      font-size: 30px; } }
+
+.fs-45 {
+  font-size: 14.59948px; }
+  @media screen and (min-width: 480px) {
+    .fs-45 {
+      font-size: calc( 14.59948px + 9.89542 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
+    .fs-45 {
+      font-size: 24.4949px; } }
+
 .fs-50 {
-  font-size: 16px; }
-  @media screen and (min-width: 480px) {
-    .fs-50 {
-      /* remo-formula : 16px, 24px, 480px, 1600px */
-      font-size: calc( 16px + 8 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    .fs-50 {
-      font-size: 24px; } }
+  font-size: 1rem; }
 
-/* @@debug $key: 60 */
 .fs-60 {
-  font-size: 14px; }
-  @media screen and (min-width: 480px) {
-    .fs-60 {
-      /* remo-formula : 14px, 20px, 480px, 1600px */
-      font-size: calc( 14px + 6 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    .fs-60 {
-      font-size: 20px; } }
+  font-size: 0.85rem; }
 
-/* @@debug $key: 70 */
 .fs-70 {
-  font-size: 12px; }
+  font-size: 11.9px; }
   @media screen and (min-width: 480px) {
     .fs-70 {
-      /* remo-formula : 12px, 16px, 480px, 1600px */
-      font-size: calc( 12px + 4 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 11.9px + 2.1 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     .fs-70 {
-      font-size: 16px; } }
+      font-size: 14px; } }
 
 h1, .h1 {
-  font-size: 48px; }
+  font-size: 24.48609px; }
   @media screen and (min-width: 480px) {
     h1, .h1 {
-      /* remo-formula : 48px, 90px, 480px, 1600px */
-      font-size: calc( 48px + 42 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 24.48609px + 76.76391 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     h1, .h1 {
-      font-size: 90px; } }
+      font-size: 101.25px; } }
 
 h2, .h2 {
-  font-size: 36px; }
+  font-size: 21.29225px; }
   @media screen and (min-width: 480px) {
     h2, .h2 {
-      /* remo-formula : 36px, 72px, 480px, 1600px */
-      font-size: calc( 36px + 36 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 21.29225px + 46.20775 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     h2, .h2 {
-      font-size: 72px; } }
+      font-size: 67.5px; } }
 
 h3, .h3 {
-  font-size: 24px; }
+  font-size: 18.515px; }
   @media screen and (min-width: 480px) {
     h3, .h3 {
-      /* remo-formula : 24px, 48px, 480px, 1600px */
-      font-size: calc( 24px + 24 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 18.515px + 26.485 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     h3, .h3 {
-      font-size: 48px; } }
+      font-size: 45px; } }
 
 h4, .h4 {
-  font-size: 21.29225px; }
+  font-size: 16.1px; }
   @media screen and (min-width: 480px) {
     h4, .h4 {
-      /* remo-formula : 21.29225px, 60.9725px, 480px, 1600px */
-      font-size: calc( 21.29225px + 39.68025 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 16.1px + 13.9 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     h4, .h4 {
-      font-size: 60.9725px; } }
+      font-size: 30px; } }
 
 h5, .h5 {
-  font-size: 16px; }
-  @media screen and (min-width: 480px) {
-    h5, .h5 {
-      /* remo-formula : 16px, 24px, 480px, 1600px */
-      font-size: calc( 16px + 8 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    h5, .h5 {
-      font-size: 24px; } }
+  font-size: 1rem; }
 
 h6, .h6, label {
-  font-size: 14px; }
-  @media screen and (min-width: 480px) {
-    h6, .h6, label {
-      /* remo-formula : 14px, 20px, 480px, 1600px */
-      font-size: calc( 14px + 6 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
-    h6, .h6, label {
-      font-size: 20px; } }
+  font-size: 0.85rem; }
 
 small, code {
-  font-size: 12px; }
+  font-size: 11.9px; }
   @media screen and (min-width: 480px) {
     small, code {
-      /* remo-formula : 12px, 16px, 480px, 1600px */
-      font-size: calc( 12px + 4 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 11.9px + 2.1 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     small, code {
-      font-size: 16px; } }
+      font-size: 14px; } }
 
 footer {
-  font-size: 21.29225px; }
+  font-size: 16.1px; }
   @media screen and (min-width: 480px) {
     footer {
-      /* remo-formula : 21.29225px, 60.9725px, 480px, 1600px */
-      font-size: calc( 21.29225px + 39.68025 * (100vw - 480px) / 1120); } }
-  @media screen and (min-width: 1600px) {
+      font-size: calc( 16.1px + 13.9 * (100vw - 480px) / 1320); } }
+  @media screen and (min-width: 1800px) {
     footer {
-      font-size: 60.9725px; } }
+      font-size: 30px; } }
 
+/*
+*    Styles propres à la page démo
+*/
 html {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;

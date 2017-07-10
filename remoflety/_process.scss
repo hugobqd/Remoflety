@@ -2,7 +2,7 @@
 //       Vérifier intégrité du tableau
 // ----------------------------------------
 @if $debug {
-    @each $key, $val in $remo0 {
+    @each $key, $val in $remoflety {
         // TODO: tester si clé est une string (ex: 'h1')
         $current-unit: "";
 
@@ -31,7 +31,6 @@
                     @error "\"#{$key}\" has mixed units (#{unit(remo-get($key, $i))} + #{$current-unit}). Use ratio or same unit";
                 }
             }
-            @include debug($current-unit, "#{$key}/u");
         }
     }
 }
@@ -55,9 +54,10 @@
 //       Création des classes de font-size .fs-10 {}…
 // ----------------------------------------
 
-/* Création automatique des classes de font-size */
-@each $key, $val in $remo0 {
-    // TODO: tester si clé est une string (ex: 'h1')
+/*
+*    Création automatique des classes de font-size
+*/
+@each $key, $val in $remoflety {
     $class-prefix: "";
     @if remo-get("prefix") == null {
         $class-prefix: "fs-";
@@ -65,7 +65,6 @@
         $class-prefix: remo-get("prefix");
     }
     @if  $key != "bp"  and  $key != "html"  and  $key != "ratio"  and  $key != "prefix" {
-        @include debug($key, '$key');
         .#{$class-prefix}#{unquote($key)} {
             @include fs($key);
         }

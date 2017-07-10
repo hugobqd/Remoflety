@@ -43,7 +43,7 @@
 
     // CHECK: Clé existe ?
     @if remo-get($key) == null  and  $debug{
-        @error "There is no key '#{$key}' in $remo0";
+        @error "There is no key '#{$key}' in $remoflety";
     }
 
     // si il n'ya qu'une valeur pas ratio :

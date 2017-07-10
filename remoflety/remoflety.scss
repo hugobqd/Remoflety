@@ -1,5 +1,4 @@
 @charset "UTF-8";
-//
 //  Responsive, modular & flexible typography
 //  • Base REM Responsive calculée selon le viewport
 //  • Ratios des titrages et des classes de font-size augmentés aux breakpoints
@@ -7,9 +6,6 @@
 //        @ include fs(10) -> .fs-10 -> font-size du h1…
 //
 
-/*
-Responsive font-size sass tool-kit
-*/
 
 // Mixin de debug Custom :
 @mixin debug($i1, $i2: 'out') {
@@ -22,5 +18,3 @@ Responsive font-size sass tool-kit
 @import "_mixins.scss";
 @import "_variables.scss";
 @import "_process.scss";
-
-// @import "_recherches.scss";

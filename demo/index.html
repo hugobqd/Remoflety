@@ -23,8 +23,8 @@
                 Classes :
                 <span>
                     <a id="select-init" href="#"><span class="fs-45">&times;</span> Réinitialiser</a>
-                    <a id="select-rand" href="#"><span class="fs-45">⚄</span> Random</a>
                     <a id="select-unif" href="#"><span class="fs-45">=</span> Uniformiser</a>
+                    <a id="select-rand" href="#"><span class="fs-45">⚄</span> Random</a>
                 </span>
             </nav>
         </div>
@@ -55,6 +55,8 @@
         <footer data-select>
             <a href="https://github.com/hugobqd/Remoflety">@github</a>
         </footer>
+
+            <div id="ratio-master" class="fs-40">&nbsp;</div>
 
     </div><!-- /#page -->
 
@@ -107,6 +109,13 @@
 
     span.class-name {
         color: royalblue;
+    }
+    #ratio-master {
+        height: 1em;
+        position: absolute;
+        width: 1px;
+        top: 0;
+        left: 50%;
     }
 
     </style>
@@ -190,8 +199,8 @@
         function getFontSize() {
             var debug = $('.debug')
             var rempx = debug.height();
-            var ratio = $('footer').height() / rempx ;
-            console.log( "getFontSize!" );
+            var ratio = $('#ratio-master').height() / rempx ;
+            console.log($('#ratio-master').height(), '/', rempx);
             debug.html('1rem: '+rempx+'px | Ratio: '+ Math.round(ratio*1000)/1000 +'');
         }
         getFontSize();

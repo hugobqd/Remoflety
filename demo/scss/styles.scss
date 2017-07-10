@@ -1,25 +1,25 @@
 @charset "UTF-8";
 
 // Permet de tester les valeurs en amont et d'afficher des messages d'erreurs personnalisés
-$debug : true;
-
+$debug : false;
 
 // Variables Remoflety :
-$remo0: (
-    "bp":    (480px, 1600px),
-    "ratio": (1.15, 1.45),
+$remoflety: (
+    "bp":    (480px, 1800px),
+    "ratio": (1.15, 1.5),
     "html":  (14px, 20px),
     //
-    "05":    (60px, 120px),
-    "10":    (48px, 90px),
-    "20":    (36px, 72px),
-    "30":    (24px, 48px),
-    "40":    3,
-    "50":    (16px, 24px),
-    "60":    (14px, 20px),
-    "70":    (12px, 16px),
+    "05":    (80px, 200px),
+    "10":    4,
+    "20":    3,
+    "30":    2,
+    "40":    1,
+    "45":    (.3, .5),
+    "50":    1rem,
+    "60":    .85rem,
+    "70":    (.85rem, .7rem),
     //
-    // "prefix": 'fs-',
+    "prefix": 'fs-',
 );
 
 // Magic! :
