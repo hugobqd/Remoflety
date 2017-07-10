@@ -269,12 +269,18 @@ $remoflety: (
 ```
 
 ```css
-
-h1, .h1 { @include fs(10);}
-h2, .h2 { @include fs(20);}
-h3, .h3 { @include fs(30);}
-h4, .h4 { @include fs(40);}
-h5, .h5 { @include fs(50);}
-h6, .h6, label { @include fs(60);}
-small { @include fs(70);}
+.display1 { @include fs("d1"); }
+.display2 { @include fs("d1"); }
+.display3 { @include fs("d1"); }
+.display4 { @include fs("d1"); }
+h1, .h1   { @include fs("h1");}
+h2, .h2   { @include fs("h2");}
+h3, .h3   { @include fs("h3");}
+h4, .h4   { @include fs("h4");}
+h1, .h1   { @include fs("h1");}
+h2, .h2   { @include fs("h2");}
+h3, .h3   { @include fs("h3");}
+h4, .h4   { @include fs("h4");}
+h5, .h5   { @include fs("h5");}
+h6, .h6   { @include fs("h6");}
 ```
