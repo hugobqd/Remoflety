@@ -148,19 +148,6 @@ Pour les niveaux inférieurs à 1rem (`0` de ratio), il est préférable de ne p
 ```css
 $remoflety: (
     …
-    "prefix" = "fs-",
-    "toto": (30px, 60px), // Mon 1er palier
-    …
-);
-```
-
-### 2.3 Les classes
-
-Des classes correspondantes aux paliers sont créées automatiquement pour facilter l'intégration. Pour modifier le prefix de ces classes, il faut utiliser la clé `prefix`. Sans réécriture la valeur par défaut est `fs-`.
-```css
-$remoflety: (
-    …
-    "h1":    3,
     "h2":    2,
     "h3":    1,
     "h4":    0, // = 1rem
@@ -169,6 +156,20 @@ $remoflety: (
     …
 );
 ```
+
+### 2.3 Les classes
+
+Des classes correspondantes aux paliers sont créées automatiquement pour facilter l'intégration. Pour modifier le prefix de ces classes, il faut utiliser la clé `prefix`. Sans réécriture la valeur par défaut est `fs-`.
+
+```css
+$remoflety: (
+    …
+    "prefix" = "fs-",
+    "toto": (30px, 60px), // -> .fs-toto { … };
+    …
+);
+```
+
 
 
 
