@@ -59,7 +59,7 @@ $remoflety: (
 
 ### 2.3 Les valeurs
 
-**Chaque palier peut avoir une seul valeur ou autant de valeurs qu'il y a de breakpoints.** (Les parenthèses sont indispensable quand il y'a plusieurs valeurs).
+**Chaque palier doit avoir une seule valeur ou autant de valeurs qu'il y a de breakpoints.** (Les parenthèses sont indispensable quand il y'a plusieurs valeurs).
 ```css
 $remoflety: (
     "bp":   (480px, 1800px),
