@@ -108,9 +108,9 @@ Pour appliquer differents ratios de manière automatique il suffit de renseigner
 
 ```css
 $remoflety: (
-    "bp":    (320px, 768px, 1800px),
+    "bp":    (320px, 1800px),
     "html":  (16px, 22px),
-    "ratio": (1.125, 1.3, 1.5), // Les ratios à chaque breakpoint
+    "ratio": (1.125, 1.5), // Les ratios à chaque breakpoint
     "h1":    3,    // De 22px à 54px Easy !
     "h2":    2,    // De 20px à 36px Easy !
     "h3":    1,    // De 18px à 24px Easy !
